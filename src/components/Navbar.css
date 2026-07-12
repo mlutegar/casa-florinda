@@ -1,0 +1,127 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background var(--transition), box-shadow var(--transition);
+  background: transparent;
+}
+
+.nav--scrolled {
+  background: var(--offwhite);
+  box-shadow: 0 2px 20px rgba(58, 62, 48, 0.1);
+}
+
+.nav__inner {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu ul {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav__menu a {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 4px;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav__menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--champanhe);
+  transition: width var(--transition);
+}
+.nav__menu a:hover::after,
+.nav__menu a.active::after {
+  width: 100%;
+}
+
+.nav--scrolled .nav__menu a {
+  color: var(--olive);
+}
+.nav__menu a.active {
+  color: var(--champanhe-dark);
+}
+.nav--scrolled .nav__menu a.active {
+  color: var(--champanhe-dark);
+}
+
+.nav__cta {
+  padding: 11px 26px;
+  font-size: 0.72rem;
+}
+
+.nav__cta-mobile {
+  display: none;
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  line-height: 0;
+}
+.nav--scrolled .nav__toggle {
+  color: var(--olive);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 940px) {
+  .nav__cta {
+    display: none;
+  }
+  .nav__toggle {
+    display: block;
+  }
+  .nav__menu {
+    position: fixed;
+    inset: 0;
+    background: var(--offwhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+  }
+  .nav__menu.is-open {
+    transform: translateX(0);
+  }
+  .nav__menu ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .nav__menu a {
+    color: var(--olive);
+    font-size: 1rem;
+  }
+  .nav__cta-mobile {
+    display: block;
+    margin-top: 14px;
+  }
+}

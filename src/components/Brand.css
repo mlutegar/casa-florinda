@@ -1,0 +1,57 @@
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+}
+
+.brand__casa {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+}
+
+.brand__florinda {
+  font-family: var(--font-script);
+  line-height: 1;
+  margin-top: -0.05em;
+}
+
+/* Tamanhos */
+.brand--sm .brand__casa {
+  font-size: 0.95rem;
+}
+.brand--sm .brand__florinda {
+  font-size: 2rem;
+}
+
+.brand--md .brand__casa {
+  font-size: 1.25rem;
+}
+.brand--md .brand__florinda {
+  font-size: 2.7rem;
+}
+
+.brand--lg .brand__casa {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: 0.4em;
+}
+.brand--lg .brand__florinda {
+  font-size: clamp(4rem, 12vw, 8rem);
+}
+
+/* Variantes de cor */
+.brand--dark .brand__casa {
+  color: var(--olive);
+}
+.brand--dark .brand__florinda {
+  color: var(--champanhe-dark);
+}
+
+.brand--light .brand__casa {
+  color: #fff;
+}
+.brand--light .brand__florinda {
+  color: var(--champanhe-light);
+}

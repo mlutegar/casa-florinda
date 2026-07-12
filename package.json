@@ -1,0 +1,29 @@
+{
+  "name": "casa-florinda",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://mlutegar.github.io/casa-florinda",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "images": "node scripts/optimize-images.mjs",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.2",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
+    "gh-pages": "^6.1.1",
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.33.5",
+    "vite": "^5.4.8"
+  }
+}

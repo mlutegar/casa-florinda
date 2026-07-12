@@ -1,0 +1,42 @@
+.pagehead {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  padding-top: var(--nav-height);
+}
+.pagehead__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(35, 38, 28, 0.55), rgba(35, 38, 28, 0.7));
+}
+.pagehead__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.pagehead__eyebrow {
+  font-family: var(--font-script);
+  font-size: 2.4rem;
+  color: var(--champanhe-light);
+  display: block;
+  line-height: 1;
+}
+.pagehead__content h1 {
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-top: 6px;
+}
+.pagehead__content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  max-width: 620px;
+  margin: 16px auto 0;
+}

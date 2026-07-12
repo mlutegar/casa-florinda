@@ -1,0 +1,58 @@
+.tst .tst__swiper {
+  padding: 10px 4px 60px;
+}
+
+.tst__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(201, 169, 106, 0.3);
+  border-radius: var(--radius);
+  padding: 38px 30px 34px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tst__quote {
+  color: var(--champanhe);
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.tst__stars {
+  display: flex;
+  gap: 4px;
+  color: var(--champanhe);
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+}
+
+.tst__card blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: rgba(245, 241, 232, 0.92);
+  flex: 1;
+  margin-bottom: 22px;
+}
+
+.tst__card figcaption {
+  display: flex;
+  flex-direction: column;
+}
+.tst__card figcaption strong {
+  color: #fff;
+  font-size: 1.05rem;
+}
+.tst__card figcaption span {
+  color: var(--champanhe-light);
+  font-size: 0.85rem;
+}
+
+.tst .swiper-pagination-bullet {
+  background: var(--champanhe-light);
+  opacity: 0.5;
+}
+.tst .swiper-pagination-bullet-active {
+  background: var(--champanhe);
+  opacity: 1;
+}

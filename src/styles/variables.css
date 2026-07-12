@@ -1,0 +1,27 @@
+:root {
+  /* Paleta Casa Florinda */
+  --offwhite: #f5f1e8;
+  --offwhite-2: #efe9db;
+  --olive: #4a4f3d;
+  --olive-dark: #3a3e30;
+  --olive-soft: #676c56;
+  --champanhe: #c9a96a;
+  --champanhe-dark: #b2915a;
+  --champanhe-light: #d9c19a;
+  --texto: #3a3a34;
+  --texto-suave: #6f6f66;
+  --branco: #fffdf8;
+
+  /* Tipografia */
+  --font-serif: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --radius: 6px;
+  --shadow: 0 12px 40px rgba(58, 62, 48, 0.12);
+  --shadow-soft: 0 6px 24px rgba(58, 62, 48, 0.08);
+  --transition: 0.35s ease;
+  --nav-height: 84px;
+}
