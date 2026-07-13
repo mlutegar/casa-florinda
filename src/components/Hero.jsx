@@ -54,9 +54,16 @@ export default function Hero() {
         </a>
       </div>
 
-      <a href="#bem-vindo" className="hero__scroll" aria-label="Rolar para baixo">
+      <button
+        type="button"
+        className="hero__scroll"
+        aria-label="Rolar para baixo"
+        onClick={() =>
+          document.getElementById('bem-vindo')?.scrollIntoView({ behavior: 'smooth' })
+        }
+      >
         <FiChevronDown />
-      </a>
+      </button>
     </section>
   )
 }

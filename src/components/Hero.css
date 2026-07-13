@@ -75,6 +75,11 @@
   color: #fff;
   font-size: 2rem;
   animation: hero-bounce 2s infinite;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
 }
 @keyframes hero-bounce {
   0%, 100% { transform: translate(-50%, 0); }
