@@ -1,17 +1,26 @@
 import PageHeader from '../components/PageHeader.jsx'
 import AccommodationCard from '../components/AccommodationCard.jsx'
+import Seo from '../components/Seo.jsx'
 import useReveal from '../hooks/useReveal.js'
 import { acomodacoes } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Home.css'
 
 export default function Acomodacoes() {
+  const { t } = useT()
   useReveal()
   return (
     <>
+      <Seo
+        title={t('acom.title')}
+        description="Chalés e suítes da Pousada Casa Florinda em Teresópolis/RJ: Chalé das Flores, Casinha da Bel, Sweet Holly, Suíte das Flores e Suíte da Lua."
+        image="pousada-01.webp"
+        path="/acomodacoes"
+      />
       <PageHeader
-        eyebrow="Nossas acomodações"
-        title="Acomodações"
-        subtitle="Suítes e chalés aconchegantes, cada um com seu charme, para uma estada inesquecível na serra."
+        eyebrow={t('acom.eyebrow')}
+        title={t('acom.title')}
+        subtitle={t('acom.sub')}
         image="pousada-01.webp"
       />
       <section className="section">

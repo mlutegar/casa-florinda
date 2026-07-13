@@ -8,7 +8,10 @@ import Acomodacoes from './pages/Acomodacoes.jsx'
 import AcomodacaoDetalhe from './pages/AcomodacaoDetalhe.jsx'
 import SobreNos from './pages/SobreNos.jsx'
 import Servicos from './pages/Servicos.jsx'
+import Contato from './pages/Contato.jsx'
 import Faq from './pages/Faq.jsx'
+import PoliticaPrivacidade from './pages/PoliticaPrivacidade.jsx'
+import Termos from './pages/Termos.jsx'
 
 export default function App() {
   return (
@@ -22,7 +25,10 @@ export default function App() {
           <Route path="/acomodacoes/:slug" element={<AcomodacaoDetalhe />} />
           <Route path="/sobre-nos" element={<SobreNos />} />
           <Route path="/servicos" element={<Servicos />} />
+          <Route path="/contato" element={<Contato />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/termos" element={<Termos />} />
         </Routes>
       </main>
       <Footer />

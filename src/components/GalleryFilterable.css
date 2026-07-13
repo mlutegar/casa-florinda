@@ -1,0 +1,30 @@
+.galfilter__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.galfilter__tab {
+  background: transparent;
+  border: 1px solid rgba(74, 79, 61, 0.25);
+  color: var(--olive);
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.galfilter__tab:hover {
+  border-color: var(--champanhe);
+  color: var(--champanhe-dark);
+}
+.galfilter__tab.is-active {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}

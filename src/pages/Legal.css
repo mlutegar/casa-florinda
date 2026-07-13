@@ -1,0 +1,23 @@
+.legal {
+  max-width: 820px;
+}
+.legal h2 {
+  font-size: 1.6rem;
+  margin: 32px 0 12px;
+}
+.legal p,
+.legal li {
+  color: var(--texto-suave);
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  margin-bottom: 12px;
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 22px;
+}
+.legal .legal__updated {
+  font-size: 0.85rem;
+  color: var(--olive-soft);
+  font-family: var(--font-sans);
+}

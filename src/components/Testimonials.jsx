@@ -3,20 +3,20 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { FaQuoteLeft, FaStar } from 'react-icons/fa'
-import { depoimentos, site } from '../data/site.js'
+import { depoimentos } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Testimonials.css'
 
 export default function Testimonials() {
+  const { t } = useT()
   return (
     <section className="section section-olive tst">
       <div className="container">
         <div className="section-head">
-          <span className="eyebrow">Depoimentos</span>
-          <h2 className="section-title">O que nossos hóspedes dizem</h2>
+          <span className="eyebrow">{t('home.dep.eyebrow')}</span>
+          <h2 className="section-title">{t('home.dep.title')}</h2>
           <hr className="divider" />
-          <p style={{ color: 'rgba(245,241,232,0.8)' }}>
-            Experiências reais de quem já se hospedou com a gente e com a nossa anfitriã {site.anfitria}.
-          </p>
+          <p style={{ color: 'rgba(245,241,232,0.8)' }}>{t('home.dep.sub')}</p>
         </div>
 
         <Swiper

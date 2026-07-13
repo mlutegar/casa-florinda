@@ -1,0 +1,246 @@
+// Frases de dados (comodidades/regras) PT -> EN
+export const phraseMap = {
+  'Wi-Fi': 'Wi-Fi',
+  'TV': 'TV',
+  'TV HD': 'HD TV',
+  'Água quente': 'Hot water',
+  'Varanda com vista': 'Balcony with a view',
+  'Estacionamento grátis': 'Free parking',
+  'Café da manhã': 'Breakfast',
+  'Hidromassagem': 'Hot tub',
+  'Hidromassagem dupla': 'Double hot tub',
+  'Mini-frigobar': 'Mini fridge',
+  'Roupa de cama': 'Bed linen',
+  'Aceita bebês (abaixo de 2 anos)': 'Babies welcome (under 2 years old)',
+  'Aceita animais de estimação': 'Pets allowed',
+  'Não é permitido fumar nos quartos': 'No smoking in the rooms',
+  'Não são permitidos eventos': 'No events allowed',
+  'Café da manhã incluído': 'Breakfast included',
+}
+
+// Dicionário de strings de interface (PT/EN).
+export const translations = {
+  pt: {
+    'nav.home': 'Início',
+    'nav.acomodacoes': 'Acomodações',
+    'nav.sobre': 'Sobre Nós',
+    'nav.servicos': 'Serviços',
+    'nav.contato': 'Contato',
+    'nav.faq': 'FAQ',
+    'nav.reservar': 'Reserve Já',
+
+    'common.saibaMais': 'Saiba Mais',
+    'common.precoConsulta': 'Preço sob consulta',
+    'common.quarto': 'quarto',
+    'common.quartos': 'quartos',
+    'common.banheiro': 'banheiro',
+    'common.banheiros': 'banheiros',
+    'common.hospede': 'hóspede',
+    'common.hospedes': 'hóspedes',
+    'common.ateHospedes': 'até {n} hóspedes',
+    'common.favorito': 'Favorito dos hóspedes',
+    'common.reservarVia': 'Reservar via WhatsApp',
+    'common.falarWhats': 'Falar no WhatsApp',
+
+    'hero.tagline': 'Seu lugar de refúgio',
+    'hero.slogan': 'Onde o descanso encontra a natureza',
+
+    'home.welcome.eyebrow': 'Seu lugar de refúgio',
+    'home.welcome.title': 'Bem-vindo à Casa Florinda',
+    'home.welcome.p1':
+      'Em um mundo onde a vida é uma corrida incessante, você merece uma pausa. Imagine-se cercado pela serenidade das montanhas, pelo canto dos pássaros e pelo ar puro da Mata Atlântica.',
+    'home.welcome.p2':
+      'No Parque Imbuí, em Teresópolis, a Casa Florinda é o seu santuário de tranquilidade — um refúgio com cara de casa e o conforto de uma pousada, cuidado em cada detalhe pela nossa anfitriã Cida.',
+    'home.welcome.cta': 'Conheça nossa história',
+    'home.welcome.badge': 'Onde o descanso encontra a natureza',
+
+    'home.acom.eyebrow': 'Nossas acomodações',
+    'home.acom.title': 'Escolha o seu refúgio',
+    'home.acom.sub':
+      'Suítes e chalés aconchegantes com vista para as montanhas, incluindo opções com hidromassagem e o favorito dos hóspedes: o charmoso Chalé das Flores.',
+
+    'home.dep.eyebrow': 'Depoimentos',
+    'home.dep.title': 'O que nossos hóspedes dizem',
+    'home.dep.sub': 'Experiências reais de quem já se hospedou com a gente e com a nossa anfitriã Cida.',
+
+    'home.gal.eyebrow': 'Galeria',
+    'home.gal.title': 'Momentos na serra',
+
+    'home.cta.eyebrow': 'Reserve sua experiência',
+    'home.cta.title': 'Viva momentos únicos na Casa Florinda',
+    'home.cta.sub': 'Consulte disponibilidade e valores diretamente com a gente pelo WhatsApp.',
+
+    'acom.eyebrow': 'Nossas acomodações',
+    'acom.title': 'Acomodações',
+    'acom.sub': 'Suítes e chalés aconchegantes, cada um com seu charme, para uma estada inesquecível na serra.',
+    'acom.comodidades': 'Comodidades',
+    'acom.horariosRegras': 'Horários e regras',
+    'acom.checkin': 'Check-in',
+    'acom.checkout': 'Check-out',
+    'acom.voltar': 'Todas as acomodações',
+    'acom.reservar': 'Reservar',
+
+    'sobre.eyebrow': 'Sobre nós',
+    'sobre.title': 'Nossa história',
+    'sobre.sub': 'Um refúgio de tranquilidade cercado pela Mata Atlântica, em Teresópolis.',
+    'sobre.welcome': 'Bem-vindo',
+    'sobre.h2': 'Cara de casa, conforto de pousada',
+    'sobre.p1':
+      'A Pousada Casa Florinda fica no Parque Imbuí, em Teresópolis – RJ, um refúgio de tranquilidade cercado pela Mata Atlântica, com ruas arborizadas e o canto de pássaros como tucanos, saíras e bem-te-vis.',
+    'sobre.p2':
+      'O bairro oferece um ambiente fresco, ar puro e vistas deslumbrantes das montanhas, criando um cenário perfeito para quem busca contato com a natureza e momentos de paz — e tudo isso a poucos minutos do centro.',
+    'sobre.p3':
+      'Cada detalhe é cuidado com carinho pela nossa anfitriã, Cida, sempre atenciosa e disposta a tornar a sua estada uma experiência única. Não à toa, nossos hóspedes se sentem em casa desde o primeiro momento.',
+    'sobre.verAcom': 'Ver acomodações',
+    'sobre.falar': 'Fale conosco',
+    'sobre.v1.t': 'Natureza',
+    'sobre.v1.p': 'Imersão total na Mata Atlântica, com ar puro e vista para as montanhas.',
+    'sobre.v2.t': 'Aconchego',
+    'sobre.v2.p': 'Ambientes acolhedores, limpos e cheios de charme, pensados para o seu descanso.',
+    'sobre.v3.t': 'Atendimento',
+    'sobre.v3.p': 'Hospitalidade de verdade, com uma anfitriã sempre à disposição.',
+
+    'serv.eyebrow': 'Consulte nossos pacotes',
+    'serv.title': 'Serviços',
+    'serv.sub': 'Experiências especiais para tornar a sua estada ainda mais memorável.',
+    'serv.solicitar': 'Solicitar pelo WhatsApp',
+
+    'faq.eyebrow': 'Dúvidas frequentes',
+    'faq.title': 'FAQ',
+    'faq.sub': 'Tudo o que você precisa saber para planejar a sua estada na Casa Florinda.',
+    'faq.ctaP': 'Ainda tem dúvidas? Fale diretamente com a gente.',
+
+    'contato.eyebrow': 'Fale conosco',
+    'contato.title': 'Contato',
+    'contato.sub': 'Tire suas dúvidas ou faça sua reserva. Será um prazer receber você!',
+    'contato.info': 'Informações',
+    'contato.enviarMsg': 'Envie uma mensagem',
+    'contato.nome': 'Nome',
+    'contato.hospedes': 'Hóspedes',
+    'contato.mensagem': 'Mensagem',
+    'contato.enviar': 'Enviar pelo WhatsApp',
+    'contato.hint': 'Ao enviar, o WhatsApp abrirá com sua mensagem pronta.',
+    'contato.placeholderNome': 'Seu nome',
+    'contato.placeholderMsg': 'Conte o que precisa...',
+
+    'footer.slogan': 'Onde o descanso encontra a natureza',
+    'footer.localizacao': 'Localização',
+    'footer.contato': 'Contato',
+    'footer.menu': 'Menu',
+    'footer.privacidade': 'Política de Privacidade',
+    'footer.termos': 'Termos e Condições',
+    'footer.direitos': 'Pousada em Teresópolis/RJ. Todos os direitos reservados.',
+  },
+
+  en: {
+    'nav.home': 'Home',
+    'nav.acomodacoes': 'Accommodations',
+    'nav.sobre': 'About Us',
+    'nav.servicos': 'Services',
+    'nav.contato': 'Contact',
+    'nav.faq': 'FAQ',
+    'nav.reservar': 'Book Now',
+
+    'common.saibaMais': 'Learn More',
+    'common.precoConsulta': 'Price on request',
+    'common.quarto': 'bedroom',
+    'common.quartos': 'bedrooms',
+    'common.banheiro': 'bathroom',
+    'common.banheiros': 'bathrooms',
+    'common.hospede': 'guest',
+    'common.hospedes': 'guests',
+    'common.ateHospedes': 'up to {n} guests',
+    'common.favorito': 'Guest favorite',
+    'common.reservarVia': 'Book via WhatsApp',
+    'common.falarWhats': 'Chat on WhatsApp',
+
+    'hero.tagline': 'Your place of refuge',
+    'hero.slogan': 'Where rest meets nature',
+
+    'home.welcome.eyebrow': 'Your place of refuge',
+    'home.welcome.title': 'Welcome to Casa Florinda',
+    'home.welcome.p1':
+      'In a world where life is a constant rush, you deserve a break. Picture yourself surrounded by the serenity of the mountains, the birdsong, and the fresh air of the Atlantic Forest.',
+    'home.welcome.p2':
+      'In Parque Imbuí, Teresópolis, Casa Florinda is your sanctuary of tranquility — a retreat that feels like home with the comfort of an inn, cared for in every detail by our host Cida.',
+    'home.welcome.cta': 'Discover our story',
+    'home.welcome.badge': 'Where rest meets nature',
+
+    'home.acom.eyebrow': 'Our accommodations',
+    'home.acom.title': 'Choose your retreat',
+    'home.acom.sub':
+      'Cozy suites and chalets with mountain views, including options with a hot tub and the guest favorite: the charming Chalé das Flores.',
+
+    'home.dep.eyebrow': 'Testimonials',
+    'home.dep.title': 'What our guests say',
+    'home.dep.sub': 'Real experiences from those who have stayed with us and with our host Cida.',
+
+    'home.gal.eyebrow': 'Gallery',
+    'home.gal.title': 'Moments in the mountains',
+
+    'home.cta.eyebrow': 'Book your experience',
+    'home.cta.title': 'Live unique moments at Casa Florinda',
+    'home.cta.sub': 'Check availability and rates directly with us on WhatsApp.',
+
+    'acom.eyebrow': 'Our accommodations',
+    'acom.title': 'Accommodations',
+    'acom.sub': 'Cozy suites and chalets, each with its own charm, for an unforgettable mountain stay.',
+    'acom.comodidades': 'Amenities',
+    'acom.horariosRegras': 'Hours & house rules',
+    'acom.checkin': 'Check-in',
+    'acom.checkout': 'Check-out',
+    'acom.voltar': 'All accommodations',
+    'acom.reservar': 'Book',
+
+    'sobre.eyebrow': 'About us',
+    'sobre.title': 'Our story',
+    'sobre.sub': 'A tranquil retreat surrounded by the Atlantic Forest, in Teresópolis.',
+    'sobre.welcome': 'Welcome',
+    'sobre.h2': 'The feel of home, the comfort of an inn',
+    'sobre.p1':
+      'Pousada Casa Florinda is located in Parque Imbuí, Teresópolis – RJ, a tranquil retreat surrounded by the Atlantic Forest, with tree-lined streets and the song of birds like toucans and tanagers.',
+    'sobre.p2':
+      'The neighborhood offers a fresh environment, pure air and stunning mountain views, creating the perfect setting for those seeking contact with nature and moments of peace — all just minutes from downtown.',
+    'sobre.p3':
+      'Every detail is lovingly cared for by our host, Cida, always attentive and ready to make your stay a unique experience. No wonder our guests feel at home from the very first moment.',
+    'sobre.verAcom': 'View accommodations',
+    'sobre.falar': 'Contact us',
+    'sobre.v1.t': 'Nature',
+    'sobre.v1.p': 'Full immersion in the Atlantic Forest, with pure air and mountain views.',
+    'sobre.v2.t': 'Comfort',
+    'sobre.v2.p': 'Welcoming, clean and charming spaces, designed for your rest.',
+    'sobre.v3.t': 'Hospitality',
+    'sobre.v3.p': 'Genuine hospitality, with a host always at your service.',
+
+    'serv.eyebrow': 'Check our packages',
+    'serv.title': 'Services',
+    'serv.sub': 'Special experiences to make your stay even more memorable.',
+    'serv.solicitar': 'Request on WhatsApp',
+
+    'faq.eyebrow': 'Frequently asked questions',
+    'faq.title': 'FAQ',
+    'faq.sub': 'Everything you need to know to plan your stay at Casa Florinda.',
+    'faq.ctaP': 'Still have questions? Talk to us directly.',
+
+    'contato.eyebrow': 'Get in touch',
+    'contato.title': 'Contact',
+    'contato.sub': 'Ask your questions or make a reservation. We would love to welcome you!',
+    'contato.info': 'Information',
+    'contato.enviarMsg': 'Send a message',
+    'contato.nome': 'Name',
+    'contato.hospedes': 'Guests',
+    'contato.mensagem': 'Message',
+    'contato.enviar': 'Send via WhatsApp',
+    'contato.hint': 'On submit, WhatsApp will open with your message ready.',
+    'contato.placeholderNome': 'Your name',
+    'contato.placeholderMsg': 'Tell us what you need...',
+
+    'footer.slogan': 'Where rest meets nature',
+    'footer.localizacao': 'Location',
+    'footer.contato': 'Contact',
+    'footer.menu': 'Menu',
+    'footer.privacidade': 'Privacy Policy',
+    'footer.termos': 'Terms & Conditions',
+    'footer.direitos': 'Inn in Teresópolis/RJ. All rights reserved.',
+  },
+}

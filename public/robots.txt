@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mlutegar.github.io/casa-florinda/sitemap.xml

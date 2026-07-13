@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
-import { img } from '../data/site.js'
+import Img from './Img.jsx'
+import { img, baseName } from '../data/site.js'
 import './Gallery.css'
 
 export default function Gallery({ images }) {
@@ -43,7 +44,7 @@ export default function Gallery({ images }) {
       <div className="gallery">
         {images.map((src, i) => (
           <button className="gallery__item" key={src + i} onClick={() => setIndex(i)}>
-            <img src={img(src)} alt={`Galeria Casa Florinda ${i + 1}`} loading="lazy" />
+            <Img name={baseName(src)} alt={`Galeria Casa Florinda ${i + 1}`} sizes="(max-width: 760px) 50vw, 300px" />
           </button>
         ))}
       </div>

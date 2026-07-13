@@ -3,45 +3,36 @@ import { FaWhatsapp } from 'react-icons/fa'
 import Hero from '../components/Hero.jsx'
 import AccommodationCard from '../components/AccommodationCard.jsx'
 import Testimonials from '../components/Testimonials.jsx'
-import Gallery from '../components/Gallery.jsx'
+import GalleryFilterable from '../components/GalleryFilterable.jsx'
+import Img from '../components/Img.jsx'
+import Seo from '../components/Seo.jsx'
 import useReveal from '../hooks/useReveal.js'
-import { site, acomodacoes, img } from '../data/site.js'
+import { acomodacoes, waReserva, img } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Home.css'
 
-const galleryImages = [
-  'pousada-01.webp', 'pousada-05.webp', 'pousada-03.webp', 'pousada-08.webp',
-  'pousada-07.webp', 'pousada-02.webp', 'pousada-06.webp', 'pousada-10.webp',
-  'pousada-09.webp',
-]
-
 export default function Home() {
+  const { t } = useT()
   useReveal()
   return (
     <>
+      <Seo jsonLd="business" />
       <Hero />
 
       {/* Boas-vindas */}
       <section id="bem-vindo" className="section welcome">
         <div className="container welcome__grid">
           <div className="welcome__text reveal">
-            <span className="eyebrow">{site.tagline}</span>
-            <h2 className="section-title">Bem-vindo à Casa Florinda</h2>
+            <span className="eyebrow">{t('home.welcome.eyebrow')}</span>
+            <h2 className="section-title">{t('home.welcome.title')}</h2>
             <hr className="divider" style={{ margin: '18px 0' }} />
-            <p>
-              Em um mundo onde a vida é uma corrida incessante, você merece uma pausa.
-              Imagine-se cercado pela serenidade das montanhas, pelo canto dos pássaros e
-              pelo ar puro da Mata Atlântica.
-            </p>
-            <p>
-              No Parque Imbuí, em Teresópolis, a Casa Florinda é o seu santuário de
-              tranquilidade — um refúgio com cara de casa e o conforto de uma pousada,
-              cuidado em cada detalhe pela nossa anfitriã {site.anfitria}.
-            </p>
-            <Link to="/sobre-nos" className="btn btn-outline">Conheça nossa história</Link>
+            <p>{t('home.welcome.p1')}</p>
+            <p>{t('home.welcome.p2')}</p>
+            <Link to="/sobre-nos" className="btn btn-outline">{t('home.welcome.cta')}</Link>
           </div>
           <div className="welcome__media reveal">
-            <img src={img('pousada-05.webp')} alt="Interior aconchegante da Casa Florinda" loading="lazy" />
-            <span className="welcome__badge">Onde o descanso encontra a natureza</span>
+            <Img name="pousada-05" alt="Interior aconchegante da Casa Florinda" sizes="(max-width: 860px) 100vw, 560px" />
+            <span className="welcome__badge">{t('home.welcome.badge')}</span>
           </div>
         </div>
       </section>
@@ -50,13 +41,10 @@ export default function Home() {
       <section className="section section-alt">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Nossas acomodações</span>
-            <h2 className="section-title">Escolha o seu refúgio</h2>
+            <span className="eyebrow">{t('home.acom.eyebrow')}</span>
+            <h2 className="section-title">{t('home.acom.title')}</h2>
             <hr className="divider" />
-            <p>
-              Suítes e chalés aconchegantes com vista para as montanhas, incluindo opções
-              com hidromassagem e o favorito dos hóspedes: o charmoso Chalé das Flores.
-            </p>
+            <p>{t('home.acom.sub')}</p>
           </div>
           <div className="home-acoms">
             {acomodacoes.map((a) => (
@@ -73,11 +61,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Galeria</span>
-            <h2 className="section-title">Momentos na serra</h2>
+            <span className="eyebrow">{t('home.gal.eyebrow')}</span>
+            <h2 className="section-title">{t('home.gal.title')}</h2>
             <hr className="divider" />
           </div>
-          <Gallery images={galleryImages} />
+          <GalleryFilterable />
         </div>
       </section>
 
@@ -85,11 +73,11 @@ export default function Home() {
       <section className="cta" style={{ backgroundImage: `url(${img('pousada-03.webp')})` }}>
         <div className="cta__overlay" />
         <div className="container cta__content">
-          <span className="eyebrow" style={{ color: 'var(--champanhe-light)' }}>Reserve sua experiência</span>
-          <h2>Viva momentos únicos na Casa Florinda</h2>
-          <p>Consulte disponibilidade e valores diretamente com a gente pelo WhatsApp.</p>
-          <a href={site.contato.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary">
-            <FaWhatsapp /> Reserve Já
+          <span className="eyebrow" style={{ color: 'var(--champanhe-light)' }}>{t('home.cta.eyebrow')}</span>
+          <h2>{t('home.cta.title')}</h2>
+          <p>{t('home.cta.sub')}</p>
+          <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary">
+            <FaWhatsapp /> {t('nav.reservar')}
           </a>
         </div>
       </section>

@@ -6,7 +6,8 @@ import 'swiper/css/pagination'
 import { FaWhatsapp } from 'react-icons/fa'
 import { FiChevronDown } from 'react-icons/fi'
 import Brand from './Brand.jsx'
-import { site, img } from '../data/site.js'
+import { waReserva, img } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Hero.css'
 
 const slides = [
@@ -18,6 +19,7 @@ const slides = [
 ]
 
 export default function Hero() {
+  const { t } = useT()
   return (
     <section className="hero">
       <Swiper
@@ -44,11 +46,11 @@ export default function Hero() {
       <div className="hero__overlay" />
 
       <div className="hero__content">
-        <span className="hero__eyebrow">{site.tagline}</span>
+        <span className="hero__eyebrow">{t('hero.tagline')}</span>
         <Brand variant="light" size="lg" />
-        <p className="hero__sub">{site.slogan}</p>
-        <a href={site.contato.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary hero__btn">
-          <FaWhatsapp /> Reserve Já
+        <p className="hero__sub">{t('hero.slogan')}</p>
+        <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary hero__btn">
+          <FaWhatsapp /> {t('nav.reservar')}
         </a>
       </div>
 

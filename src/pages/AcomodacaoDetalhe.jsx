@@ -1,14 +1,17 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
-import { FiUsers, FiHome, FiArrowLeft } from 'react-icons/fi'
+import { FiUsers, FiHome, FiArrowLeft, FiCheck, FiClock } from 'react-icons/fi'
 import { LuBath } from 'react-icons/lu'
 import PageHeader from '../components/PageHeader.jsx'
 import Gallery from '../components/Gallery.jsx'
+import Seo from '../components/Seo.jsx'
 import useReveal from '../hooks/useReveal.js'
-import { acomodacoes, site } from '../data/site.js'
+import { acomodacoes, site, waReserva } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Detalhe.css'
 
 export default function AcomodacaoDetalhe() {
+  const { t, pick, tp } = useT()
   const { slug } = useParams()
   const a = acomodacoes.find((x) => x.slug === slug)
   useReveal([slug])
@@ -17,10 +20,16 @@ export default function AcomodacaoDetalhe() {
 
   return (
     <>
-      <PageHeader
-        eyebrow={a.destaque ? 'Favorito dos hóspedes' : 'Acomodação'}
+      <Seo
         title={a.nome}
-        subtitle={a.resumo}
+        description={pick(a, 'resumo')}
+        image={a.capa}
+        path={`/acomodacoes/${a.slug}`}
+      />
+      <PageHeader
+        eyebrow={a.destaque ? t('common.favorito') : t('nav.acomodacoes')}
+        title={a.nome}
+        subtitle={pick(a, 'resumo')}
         image={a.capa}
       />
 
@@ -28,19 +37,42 @@ export default function AcomodacaoDetalhe() {
         <div className="container detalhe">
           <div className="detalhe__intro">
             <Link to="/acomodacoes" className="detalhe__back">
-              <FiArrowLeft /> Todas as acomodações
+              <FiArrowLeft /> {t('acom.voltar')}
             </Link>
 
             <ul className="detalhe__specs">
-              <li><FiHome /> {a.quartos} {a.quartos > 1 ? 'quartos' : 'quarto'}</li>
-              <li><LuBath /> {a.banheiros} {a.banheiros > 1 ? 'banheiros' : 'banheiro'}</li>
-              <li><FiUsers /> até {a.hospedes} hóspedes</li>
+              <li><FiHome /> {a.quartos} {t(a.quartos > 1 ? 'common.quartos' : 'common.quarto')}</li>
+              <li><LuBath /> {a.banheiros} {t(a.banheiros > 1 ? 'common.banheiros' : 'common.banheiro')}</li>
+              <li><FiUsers /> {t('common.ateHospedes', { n: a.hospedes })}</li>
             </ul>
 
-            <p className="detalhe__desc">{a.descricao}</p>
-            <p className="detalhe__preco">Preço sob consulta</p>
-            <a href={site.contato.whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary">
-              <FaWhatsapp /> Reservar via WhatsApp
+            <p className="detalhe__desc">{pick(a, 'descricao')}</p>
+
+            {a.comodidades?.length > 0 && (
+              <div className="detalhe__block">
+                <h3>{t('acom.comodidades')}</h3>
+                <ul className="detalhe__amenities">
+                  {a.comodidades.map((c) => (
+                    <li key={c}><FiCheck /> {tp(c)}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="detalhe__block">
+              <h3>{t('acom.horariosRegras')}</h3>
+              <ul className="detalhe__rules">
+                <li><FiClock /> {t('acom.checkin')}: {site.horarios.checkin}</li>
+                <li><FiClock /> {t('acom.checkout')}: {site.horarios.checkout}</li>
+                {site.regras.map((r) => (
+                  <li key={r}><FiCheck /> {tp(r)}</li>
+                ))}
+              </ul>
+            </div>
+
+            <p className="detalhe__preco">{t('common.precoConsulta')}</p>
+            <a href={waReserva(a.nome)} target="_blank" rel="noreferrer" className="btn btn-primary">
+              <FaWhatsapp /> {t('acom.reservar')} {a.nome}
             </a>
           </div>
 
