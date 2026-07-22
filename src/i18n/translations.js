@@ -42,8 +42,8 @@ export const translations = {
     'common.reservarVia': 'Reservar via WhatsApp',
     'common.falarWhats': 'Falar no WhatsApp',
 
-    'hero.tagline': 'Seu lugar de refúgio',
-    'hero.slogan': 'Onde o descanso encontra a natureza',
+    'hero.tagline': 'Bem-vindo à Casa Florinda',
+    'hero.slogan': 'Sua Casa na Serra',
 
     'home.welcome.eyebrow': 'Seu lugar de refúgio',
     'home.welcome.title': 'Bem-vindo à Casa Florinda',

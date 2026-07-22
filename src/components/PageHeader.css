@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   margin-top: 0;
-  padding-top: var(--nav-height);
+  padding-top: calc(var(--nav-height) + var(--topbar-height));
 }
 .pagehead__overlay {
   position: absolute;

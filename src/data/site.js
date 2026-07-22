@@ -43,7 +43,7 @@ export const site = {
     cidade: 'Teresópolis',
     estado: 'RJ',
     cep: '',
-    localizacao: 'Parque Imbuí, Teresópolis – RJ',
+    localizacao: 'Parque do Imbuí, Teresópolis',
     localizacaoLonga:
       'Estrada dos Pinheiros, 336 — Parque Imbuí, Teresópolis – RJ. Um refúgio cercado pela Mata Atlântica, com ruas arborizadas, ar puro e vistas deslumbrantes das montanhas.',
     mapsQuery: 'Estrada dos Pinheiros, 336, Parque Imbuí, Teresópolis - RJ',

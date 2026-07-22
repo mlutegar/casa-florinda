@@ -16,6 +16,7 @@
   background-position: center;
   transform: scale(1.08);
   animation: hero-zoom 7s ease forwards;
+  will-change: transform;
 }
 @keyframes hero-zoom {
   to { transform: scale(1); }
@@ -46,11 +47,15 @@
   padding: 0 20px;
 }
 
-.hero__eyebrow {
-  font-family: var(--font-script);
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  color: var(--champanhe-light);
-  margin-bottom: 6px;
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 0.2em;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
 }
 
 .hero__sub {
@@ -58,7 +63,7 @@
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2.4vw, 1.6rem);
   letter-spacing: 0.06em;
-  margin: 18px 0 34px;
+  margin: 10px 0 34px;
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 

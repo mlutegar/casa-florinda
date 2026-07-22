@@ -21,7 +21,7 @@ export default function Footer() {
           <p>
             <FiMapPin />{' '}
             <a href={site.contato.mapsLink} target="_blank" rel="noreferrer">
-              {site.contato.endereco} — {site.contato.bairro}, {site.contato.cidade}/{site.contato.estado}
+              {site.contato.localizacao}
             </a>
           </p>
         </div>

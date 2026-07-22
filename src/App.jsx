@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import TopBar from './components/TopBar.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import WhatsAppFloat from './components/WhatsAppFloat.jsx'
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <TopBar />
       <Navbar />
       <main>
         <Routes>
