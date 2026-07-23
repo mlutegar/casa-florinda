@@ -60,7 +60,6 @@ export const site = {
   // Regras da casa (dados reais)
   regras: [
     'Aceita bebês (abaixo de 2 anos)',
-    'Aceita animais de estimação',
     'Não é permitido fumar nos quartos',
     'Não são permitidos eventos',
     'Café da manhã incluído',
@@ -82,6 +81,8 @@ export const acomodacoes = [
     quartos: 1,
     banheiros: 1,
     hospedes: 3,
+    preco: 450,
+    precoFimSemana: 550,
     resumo:
       'O favorito dos hóspedes. Um charmoso chalé em estilo A-frame, com varanda de tirar o fôlego e vista para as montanhas.',
     resumo_en:
@@ -91,69 +92,124 @@ export const acomodacoes = [
     descricao_en:
       'Amid the tranquility of the mountains, Chalé das Flores was designed for those seeking a unique experience of immersion in the landscape. Cozy and intimate, it combines the charm of wood, a stunning balcony and all the comfort of an exclusive retreat in nature.',
     capa: 'pousada-01.webp',
-    galeria: ['pousada-01.webp', 'pousada-02.webp', 'pousada-03.webp', 'pousada-04.webp'],
-    comodidades: ['Wi-Fi', 'Varanda com vista', 'TV', 'Água quente', 'Estacionamento grátis', 'Café da manhã'],
+    galeria: [
+      'pousada-11.webp',
+      'pousada-12.webp',
+      'pousada-13.webp',
+      'pousada-14.webp',
+      'pousada-15.webp',
+      'pousada-16.webp',
+      'pousada-01.webp',
+      'pousada-02.webp',
+      'pousada-03.webp',
+      'pousada-04.webp',
+    ],
+    comodidades: [
+      'Wi-Fi',
+      'Varanda com vista',
+      'TV',
+      'Água quente',
+      'Estacionamento grátis',
+      'Café da manhã',
+      'Ar-condicionado',
+      'Cozinha equipada com frigobar, microondas, airfryer, sanduicheira e cafeteira',
+    ],
   },
   {
-    slug: 'casinha-da-bel',
-    nome: 'Casinha da Bel',
-    destaque: false,
+    slug: 'suite-1953-hidromassagem',
+    nome: 'Suíte 1953 - Hidromassagem',
+    destaque: true,
     quartos: 1,
     banheiros: 2,
     hospedes: 2,
+    preco: 500,
+    precoFimSemana: 600,
     resumo:
-      'Espaçosa e elegante, com cama de dossel, lareira de charme e banheiro com hidromassagem e vista para a serra.',
+      'A favorita dos nossos hóspedes! Perfeita para casais que buscam requinte e conforto. A suíte 1953 encanta com uma decoração clássica e elegante, portas para a varanda com vista para as montanhas e um banheiro amplo com hidromassagem.',
     resumo_en:
-      'Spacious and elegant, with a canopy bed, charming decor and a bathroom with a hot tub and mountain views.',
+      "Our guests' favourite! Perfect for couples seeking refinement and comfort. Suite 1953 charms with classic and elegant décor, doors to a balcony with mountain views and a spacious bathroom with a hot tub.",
     descricao:
-      'Perfeita para casais que buscam requinte e privacidade. A Casinha da Bel encanta com sua suíte espaçosa, cama de dossel, portas para a varanda com vista para as montanhas e um banheiro amplo com hidromassagem.',
+      'A favorita dos nossos hóspedes! Perfeita para casais que buscam requinte e conforto. A suíte 1953 encanta com uma decoração clássica e elegante, portas para a varanda com vista para as montanhas e um banheiro amplo com hidromassagem.',
     descricao_en:
-      'Perfect for couples seeking refinement and privacy. Casinha da Bel charms with its spacious suite, canopy bed, doors to a balcony with mountain views and a large bathroom with a hot tub.',
+      "Our guests' favourite! Perfect for couples seeking refinement and comfort. Suite 1953 charms with classic and elegant décor, doors to a balcony with mountain views and a spacious bathroom with a hot tub.",
     capa: 'pousada-05.webp',
     galeria: ['pousada-05.webp', 'pousada-08.webp'],
-    comodidades: ['Wi-Fi', 'Hidromassagem', 'Varanda com vista', 'TV HD', 'Água quente', 'Estacionamento grátis', 'Café da manhã'],
+    comodidades: ['Wi-Fi', 'Hidromassagem', 'Frigobar', 'Varanda com vista', 'TV HD', 'Água quente', 'Estacionamento grátis', 'Café da manhã'],
+    regras: [
+      'Não é permitido fumar nos quartos',
+      'Não são permitidos eventos',
+      'Café da manhã incluído',
+    ],
   },
   {
     slug: 'sweet-holly',
-    nome: 'Sweet Holly',
+    nome: 'Suíte 1954',
     destaque: false,
     quartos: 1,
     banheiros: 1,
     hospedes: 3,
+    preco: 380,
+    precoFimSemana: 450,
     resumo: 'Um glamour! Ambiente romântico e cheio de personalidade para momentos especiais.',
     resumo_en: 'Pure glamour! A romantic room full of personality for special moments.',
     descricao:
-      'A Sweet Holly é pura elegância e romance. Um ambiente acolhedor e cheio de charme, ideal para celebrar ocasiões especiais com todo o conforto e um toque de glamour.',
+      'A Suíte 1954 é pura elegância e romance. Um ambiente acolhedor e cheio de charme, ideal para celebrar ocasiões especiais com todo o conforto e um toque de glamour.',
     descricao_en:
-      'Sweet Holly is pure elegance and romance. A cozy, charming space, ideal for celebrating special occasions with full comfort and a touch of glamour.',
+      'Suíte 1954 is pure elegance and romance. A cozy, charming space, ideal for celebrating special occasions with full comfort and a touch of glamour.',
     capa: 'pousada-10.webp',
     galeria: ['pousada-10.webp', 'pousada-06.webp'],
     comodidades: ['Wi-Fi', 'TV', 'Água quente', 'Roupa de cama', 'Estacionamento grátis', 'Café da manhã'],
   },
   {
     slug: 'suite-das-flores',
-    nome: 'Suíte das Flores',
+    nome: 'Suíte 1952',
     destaque: false,
     quartos: 1,
     banheiros: 1,
     hospedes: 2,
+    preco: 350,
+    precoFimSemana: 420,
     resumo: 'Suíte aconchegante e cheia de charme, com decoração delicada e clima romântico.',
     resumo_en: 'A cozy, charming suite with delicate decor and a romantic atmosphere.',
     descricao:
-      'Delicada e acolhedora, a Suíte das Flores é um convite ao descanso. Decoração cuidadosa, conforto e a serenidade da serra para uma estada inesquecível.',
+      'Delicada e acolhedora, a Suíte 1952 é um convite ao descanso. Decoração cuidadosa, conforto e a serenidade da serra para uma estada inesquecível.',
     descricao_en:
-      'Delicate and welcoming, Suíte das Flores is an invitation to rest. Careful decor, comfort and the serenity of the mountains for an unforgettable stay.',
+      'Delicate and welcoming, Suíte 1952 is an invitation to rest. Careful decor, comfort and the serenity of the mountains for an unforgettable stay.',
     capa: 'pousada-07.webp',
     galeria: ['pousada-07.webp'],
     comodidades: ['Wi-Fi', 'TV', 'Água quente', 'Roupa de cama', 'Estacionamento grátis', 'Café da manhã'],
   },
   {
-    slug: 'suite-da-lua',
-    nome: 'Suíte da Lua',
+    // TODO: substituir textos e fotos pelos dados reais do cliente
+    slug: 'casinha',
+    nome: 'Casinha',
     destaque: false,
     quartos: 1,
     banheiros: 1,
     hospedes: 2,
+    preco: 320,
+    precoFimSemana: 390,
+    resumo:
+      'Um cantinho aconchegante e charmoso, perfeito para relaxar e curtir o melhor da serra com conforto e tranquilidade.',
+    resumo_en:
+      'A cozy and charming little retreat, perfect for relaxing and enjoying the best of the mountains in comfort and tranquility.',
+    descricao:
+      'A Casinha é um espaço intimista e acolhedor, pensado para quem busca paz, natureza e conforto. Com decoração cuidadosa e ambiente tranquilo, é o refúgio ideal para descansar e recarregar as energias em meio à beleza da serra.',
+    descricao_en:
+      'Casinha is an intimate and welcoming space, designed for those seeking peace, nature and comfort. With careful decor and a quiet atmosphere, it is the perfect retreat to rest and recharge amid the beauty of the mountains.',
+    capa: 'pousada-08.webp', // TODO: substituir pela foto real da Casinha
+    galeria: ['pousada-08.webp'], // TODO: adicionar fotos reais da Casinha
+    comodidades: ['Wi-Fi', 'TV', 'Água quente', 'Roupa de cama', 'Estacionamento grátis', 'Café da manhã'],
+  },
+  {
+    slug: 'suite-da-lua',
+    nome: 'Suíte 1955',
+    destaque: false,
+    quartos: 1,
+    banheiros: 1,
+    hospedes: 2,
+    preco: 480,
+    precoFimSemana: 580,
     resumo:
       'Suíte espaçosa com varanda, hidromassagem dupla e uma vista linda para as montanhas.',
     resumo_en:

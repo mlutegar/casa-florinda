@@ -13,6 +13,10 @@ import Contato from './pages/Contato.jsx'
 import Faq from './pages/Faq.jsx'
 import PoliticaPrivacidade from './pages/PoliticaPrivacidade.jsx'
 import Termos from './pages/Termos.jsx'
+import Checkout from './pages/Checkout.jsx'
+import BookingConfirmacao from './pages/BookingConfirmacao.jsx'
+import BookingPendente from './pages/BookingPendente.jsx'
+import BookingErro from './pages/BookingErro.jsx'
 
 export default function App() {
   return (
@@ -31,6 +35,10 @@ export default function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/termos" element={<Termos />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/reserva/confirmada" element={<BookingConfirmacao />} />
+          <Route path="/reserva/pendente" element={<BookingPendente />} />
+          <Route path="/reserva/erro" element={<BookingErro />} />
         </Routes>
       </main>
       <Footer />

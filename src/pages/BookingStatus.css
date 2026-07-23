@@ -1,0 +1,54 @@
+.booking-status {
+  min-height: calc(100vh - var(--nav-height) - var(--topbar-height));
+  display: flex;
+  align-items: center;
+}
+
+.booking-status__inner {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.booking-status__icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+
+.booking-status__icon--ok    { color: #27ae60; }
+.booking-status__icon--pending { color: var(--champanhe-dark); }
+.booking-status__icon--erro  { color: #c0392b; }
+
+.booking-status__titulo {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: var(--olive);
+  margin-bottom: 16px;
+}
+
+.booking-status__texto {
+  font-size: 1rem;
+  color: var(--texto-suave);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.booking-status__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+.booking-status__home {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--champanhe-dark);
+  text-decoration: underline;
+}
+.booking-status__home:hover {
+  color: var(--olive);
+}

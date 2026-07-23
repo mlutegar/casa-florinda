@@ -1,12 +1,12 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { FaWhatsapp } from 'react-icons/fa'
 import { FiUsers, FiHome, FiArrowLeft, FiCheck, FiClock } from 'react-icons/fi'
 import { LuBath } from 'react-icons/lu'
 import PageHeader from '../components/PageHeader.jsx'
 import Gallery from '../components/Gallery.jsx'
 import Seo from '../components/Seo.jsx'
+import BookingForm from '../components/BookingForm.jsx'
 import useReveal from '../hooks/useReveal.js'
-import { acomodacoes, site, waReserva } from '../data/site.js'
+import { acomodacoes, site } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'
 import './Detalhe.css'
 
@@ -64,16 +64,13 @@ export default function AcomodacaoDetalhe() {
               <ul className="detalhe__rules">
                 <li><FiClock /> {t('acom.checkin')}: {site.horarios.checkin}</li>
                 <li><FiClock /> {t('acom.checkout')}: {site.horarios.checkout}</li>
-                {site.regras.map((r) => (
+                {(a.regras ?? site.regras).map((r) => (
                   <li key={r}><FiCheck /> {tp(r)}</li>
                 ))}
               </ul>
             </div>
 
-            <p className="detalhe__preco">{t('common.precoConsulta')}</p>
-            <a href={waReserva(a.nome)} target="_blank" rel="noreferrer" className="btn btn-primary">
-              <FaWhatsapp /> {t('acom.reservar')} {a.nome}
-            </a>
+            <BookingForm acomodacao={a} />
           </div>
 
           <div className="detalhe__gallery reveal">
