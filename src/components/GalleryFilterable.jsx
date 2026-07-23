@@ -9,8 +9,11 @@ export default function GalleryFilterable() {
   const [cat, setCat] = useState('todas')
 
   const images = useMemo(
-    () => galeria.filter((g) => cat === 'todas' || g.categoria === cat).map((g) => g.file),
-    [cat],
+    () =>
+      galeria
+        .filter((g) => cat === 'todas' || g.categoria === cat)
+        .map((g) => ({ file: g.file, alt: pick(g, 'alt') })),
+    [cat, pick],
   )
 
   return (

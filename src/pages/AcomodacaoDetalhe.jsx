@@ -27,6 +27,7 @@ export default function AcomodacaoDetalhe() {
         description={pick(a, 'resumo')}
         image={a.capa}
         path={`/acomodacoes/${a.slug}`}
+        acomodacao={a}
       />
       <PageHeader
         eyebrow={a.destaque ? t('common.favorito') : t('nav.acomodacoes')}

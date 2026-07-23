@@ -14,7 +14,8 @@ export const phraseMap = {
   'Roupa de cama': 'Bed linen',
   'Aceita bebês (abaixo de 2 anos)': 'Babies welcome (under 2 years old)',
   'Ar-condicionado': 'Air conditioning',
-  'Cozinha equipada com frigobar, microondas, airfryer, sanduicheira e cafeteira': 'Equipped kitchen with mini-fridge, microwave, air fryer, sandwich maker and coffee maker',
+  'Cozinha equipada': 'Equipped kitchen',
+  'Eletrodomésticos: airfryer, microondas, cafeteira e sanduicheira': 'Appliances: air fryer, microwave, coffee maker and sandwich maker',
   'Não é permitido fumar nos quartos': 'No smoking in the rooms',
   'Não são permitidos eventos': 'No events allowed',
   'Café da manhã incluído': 'Breakfast included',
@@ -67,7 +68,7 @@ export const translations = {
     'home.welcome.p1':
       'Em um mundo onde a vida é uma corrida incessante, você merece uma pausa. Imagine-se cercado pela serenidade das montanhas, pelo canto dos pássaros e pelo ar puro da Mata Atlântica.',
     'home.welcome.p2':
-      'No Parque Imbuí, em Teresópolis, a Casa Florinda é o seu santuário de tranquilidade — um refúgio com cara de casa e o conforto de uma pousada, cuidado em cada detalhe pela nossa anfitriã Cida.',
+      'No Parque do Imbuí, em Teresópolis, a Casa Florinda é o seu santuário de tranquilidade — um refúgio com cara de casa e o conforto de uma pousada, cuidado em cada detalhe pela nossa anfitriã Cida.',
     'home.welcome.cta': 'Conheça nossa história',
     'home.welcome.badge': 'Onde o descanso encontra a natureza',
 
@@ -103,7 +104,7 @@ export const translations = {
     'sobre.welcome': 'Bem-vindo',
     'sobre.h2': 'Cara de casa, conforto de pousada',
     'sobre.p1':
-      'A Pousada Casa Florinda fica no Parque Imbuí, em Teresópolis – RJ, um refúgio de tranquilidade cercado pela Mata Atlântica, com ruas arborizadas e o canto de pássaros como tucanos, saíras e bem-te-vis.',
+      'A Pousada Casa Florinda fica no Parque do Imbuí, em Teresópolis – RJ, um refúgio de tranquilidade cercado pela Mata Atlântica, com ruas arborizadas e o canto de pássaros como tucanos, saíras e bem-te-vis.',
     'sobre.p2':
       'O bairro oferece um ambiente fresco, ar puro e vistas deslumbrantes das montanhas, criando um cenário perfeito para quem busca contato com a natureza e momentos de paz — e tudo isso a poucos minutos do centro.',
     'sobre.p3':
@@ -204,7 +205,7 @@ export const translations = {
     'home.welcome.p1':
       'In a world where life is a constant rush, you deserve a break. Picture yourself surrounded by the serenity of the mountains, the birdsong, and the fresh air of the Atlantic Forest.',
     'home.welcome.p2':
-      'In Parque Imbuí, Teresópolis, Casa Florinda is your sanctuary of tranquility — a retreat that feels like home with the comfort of an inn, cared for in every detail by our host Cida.',
+      'In Parque do Imbuí, Teresópolis, Casa Florinda is your sanctuary of tranquility — a retreat that feels like home with the comfort of an inn, cared for in every detail by our host Cida.',
     'home.welcome.cta': 'Discover our story',
     'home.welcome.badge': 'Where rest meets nature',
 
@@ -240,7 +241,7 @@ export const translations = {
     'sobre.welcome': 'Welcome',
     'sobre.h2': 'The feel of home, the comfort of an inn',
     'sobre.p1':
-      'Pousada Casa Florinda is located in Parque Imbuí, Teresópolis – RJ, a tranquil retreat surrounded by the Atlantic Forest, with tree-lined streets and the song of birds like toucans and tanagers.',
+      'Pousada Casa Florinda is located in Parque do Imbuí, Teresópolis – RJ, a tranquil retreat surrounded by the Atlantic Forest, with tree-lined streets and the song of birds like toucans and tanagers.',
     'sobre.p2':
       'The neighborhood offers a fresh environment, pure air and stunning mountain views, creating the perfect setting for those seeking contact with nature and moments of peace — all just minutes from downtown.',
     'sobre.p3':

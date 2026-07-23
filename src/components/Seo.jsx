@@ -41,7 +41,33 @@ function lodgingJsonLd() {
   return data
 }
 
-export default function Seo({ title, description = DEFAULT_DESC, image = 'og-image.jpg', path = '/', jsonLd }) {
+function hotelRoomJsonLd(acomodacao) {
+  const a = acomodacao
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HotelRoom',
+    name: a.nome,
+    description: a.resumo,
+    url: `${SITE_URL}/#/acomodacoes/${a.slug}`,
+    image: `${SITE_URL}/midia/${a.capa}`,
+    occupancy: {
+      '@type': 'QuantitativeValue',
+      maxValue: a.hospedes,
+    },
+    amenityFeature: (a.comodidades ?? []).map((c) => ({
+      '@type': 'LocationFeatureSpecification',
+      name: c,
+      value: true,
+    })),
+    containedInPlace: {
+      '@type': 'LodgingBusiness',
+      name: 'Pousada Casa Florinda',
+      url: SITE_URL,
+    },
+  }
+}
+
+export default function Seo({ title, description = DEFAULT_DESC, image = 'og-image.jpg', path = '/', jsonLd, acomodacao }) {
   const fullTitle = title
     ? `${title} — Pousada Casa Florinda`
     : 'Pousada Casa Florinda — Teresópolis/RJ'
@@ -68,6 +94,9 @@ export default function Seo({ title, description = DEFAULT_DESC, image = 'og-ima
 
       {jsonLd === 'business' && (
         <script type="application/ld+json">{JSON.stringify(lodgingJsonLd())}</script>
+      )}
+      {acomodacao && (
+        <script type="application/ld+json">{JSON.stringify(hotelRoomJsonLd(acomodacao))}</script>
       )}
     </Helmet>
   )

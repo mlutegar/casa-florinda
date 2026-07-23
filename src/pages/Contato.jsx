@@ -18,10 +18,12 @@ export default function Contato() {
     mensagem: '',
   })
   const [erroNome, setErroNome] = useState(false)
+  const [erroData, setErroData] = useState(false)
   const [enviando, setEnviando] = useState(false)
 
   const update = (e) => {
     if (e.target.name === 'nome') setErroNome(false)
+    if (e.target.name === 'checkin' || e.target.name === 'checkout') setErroData(false)
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
 
@@ -30,6 +32,11 @@ export default function Contato() {
     if (!form.nome.trim()) {
       setErroNome(true)
       document.getElementById('contato-nome')?.focus()
+      return
+    }
+    if (form.checkin && form.checkout && form.checkout <= form.checkin) {
+      setErroData(true)
+      document.getElementById('contato-checkout')?.focus()
       return
     }
     setEnviando(true)
@@ -142,7 +149,20 @@ export default function Contato() {
               </label>
               <label htmlFor="contato-checkout">
                 {t('acom.checkout')}
-                <input id="contato-checkout" type="date" name="checkout" value={form.checkout} onChange={update} />
+                <input
+                  id="contato-checkout"
+                  type="date"
+                  name="checkout"
+                  value={form.checkout}
+                  onChange={update}
+                  aria-invalid={erroData}
+                  aria-describedby={erroData ? 'contato-data-erro' : undefined}
+                />
+                {erroData && (
+                  <span id="contato-data-erro" role="alert" className="contato__erro">
+                    {t('widget.erroDatas')}
+                  </span>
+                )}
               </label>
             </div>
             <label htmlFor="contato-hospedes">

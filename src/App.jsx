@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import TopBar from './components/TopBar.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
@@ -31,6 +31,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/acomodacoes" element={<Acomodacoes />} />
+            <Route path="/acomodacoes/casinha-da-bel" element={<Navigate to="/acomodacoes/suite-1953-hidromassagem" replace />} />
+            <Route path="/acomodacoes/sweet-holly" element={<Navigate to="/acomodacoes/suite-1954" replace />} />
+            <Route path="/acomodacoes/suite-das-flores" element={<Navigate to="/acomodacoes/suite-1952" replace />} />
+            <Route path="/acomodacoes/suite-da-lua" element={<Navigate to="/acomodacoes/suite-1955" replace />} />
             <Route path="/acomodacoes/:slug" element={<AcomodacaoDetalhe />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
             <Route path="/servicos" element={<Servicos />} />

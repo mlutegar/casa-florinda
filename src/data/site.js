@@ -45,16 +45,16 @@ export const site = {
     instagram: '@pousada_casa_florinda',
     instagramLink: 'https://www.instagram.com/pousada_casa_florinda',
     endereco: 'Estrada dos Pinheiros, 336',
-    bairro: 'Parque Imbuí',
+    bairro: 'Parque do Imbuí',
     cidade: 'Teresópolis',
     estado: 'RJ',
     cep: '',
     localizacao: 'Parque do Imbuí, Teresópolis',
     localizacaoLonga:
-      'Estrada dos Pinheiros, 336 — Parque Imbuí, Teresópolis – RJ. Um refúgio cercado pela Mata Atlântica, com ruas arborizadas, ar puro e vistas deslumbrantes das montanhas.',
-    mapsQuery: 'Estrada dos Pinheiros, 336, Parque Imbuí, Teresópolis - RJ',
+      'Estrada dos Pinheiros, 336 — Parque do Imbuí, Teresópolis – RJ. Um refúgio cercado pela Mata Atlântica, com ruas arborizadas, ar puro e vistas deslumbrantes das montanhas.',
+    mapsQuery: 'Estrada dos Pinheiros, 336, Parque do Imbuí, Teresópolis - RJ',
     mapsLink:
-      'https://www.google.com/maps/search/?api=1&query=Estrada+dos+Pinheiros+336+Parque+Imbui+Teresopolis+RJ',
+      'https://www.google.com/maps/search/?api=1&query=Estrada+dos+Pinheiros+336+Parque+do+Imbu%C3%AD+Teresópolis+RJ',
   },
 
   // Horarios (dados reais)
@@ -103,25 +103,25 @@ export const acomodacoes = [
     preco: 450,
     precoFimSemana: 550,
     resumo:
-      'O favorito dos hóspedes. Um charmoso chalé em estilo A-frame, com varanda de tirar o fôlego e vista para as montanhas.',
+      'O mais requisitado da casa. Um charmoso chalé A-frame com varanda de tirar o fôlego e vista para as montanhas.',
     resumo_en:
-      'The guest favorite. A charming A-frame chalet with a breathtaking balcony and mountain views.',
+      'Our most requested accommodation. A charming A-frame chalet with a breathtaking balcony and mountain views.',
     descricao:
       'Em meio à tranquilidade da serra, o Chalé das Flores foi pensado para quem deseja uma experiência única de imersão na paisagem. Aconchegante e intimista, reúne o charme da madeira, uma varanda deslumbrante e todo o conforto de um refúgio exclusivo na natureza.',
     descricao_en:
       'Amid the tranquility of the mountains, Chalé das Flores was designed for those seeking a unique experience of immersion in the landscape. Cozy and intimate, it combines the charm of wood, a stunning balcony and all the comfort of an exclusive retreat in nature.',
-    capa: 'pousada-01.webp',
+    capa: 'pousada-11.webp',
     galeria: [
-      'pousada-11.webp',
-      'pousada-12.webp',
-      'pousada-13.webp',
-      'pousada-14.webp',
-      'pousada-15.webp',
-      'pousada-16.webp',
-      'pousada-01.webp',
-      'pousada-02.webp',
-      'pousada-03.webp',
-      'pousada-04.webp',
+      { file: 'pousada-11.webp', alt: 'Fachada do Chalé das Flores iluminada ao entardecer' },
+      { file: 'pousada-12.webp', alt: 'Interior do Chalé das Flores com vista para a varanda e as montanhas' },
+      { file: 'pousada-13.webp', alt: 'Café da manhã servido na mesa do Chalé das Flores' },
+      { file: 'pousada-14.webp', alt: 'Ambiente aconchegante do Chalé das Flores à noite' },
+      { file: 'pousada-15.webp', alt: 'Vista da cama para a janela triangular A-frame do Chalé' },
+      { file: 'pousada-16.webp', alt: 'Café da manhã na varanda do Chalé das Flores com vista da serra' },
+      { file: 'pousada-01.webp', alt: 'Quarto do Chalé das Flores com decoração em madeira' },
+      { file: 'pousada-02.webp', alt: 'Vista para as montanhas a partir do Chalé das Flores' },
+      { file: 'pousada-03.webp', alt: 'Varanda do Chalé das Flores com paisagem da serra' },
+      { file: 'pousada-04.webp', alt: 'Detalhes internos do Chalé das Flores' },
     ],
     comodidades: [
       'Wi-Fi',
@@ -131,7 +131,8 @@ export const acomodacoes = [
       'Estacionamento grátis',
       'Café da manhã',
       'Ar-condicionado',
-      'Cozinha equipada com frigobar, microondas, airfryer, sanduicheira e cafeteira',
+      'Cozinha equipada',
+      'Eletrodomésticos: airfryer, microondas, cafeteira e sanduicheira',
     ],
   },
   {
@@ -144,9 +145,9 @@ export const acomodacoes = [
     preco: 500,
     precoFimSemana: 600,
     resumo:
-      'A favorita dos nossos hóspedes! Perfeita para casais que buscam requinte e conforto. A suíte 1953 encanta com uma decoração clássica e elegante, portas para a varanda com vista para as montanhas e um banheiro amplo com hidromassagem.',
+      'A mais requisitada da casa. Decoração clássica e elegante, varanda com vista para as montanhas e banheiro com hidromassagem — para casais que buscam requinte e conforto.',
     resumo_en:
-      "Our guests' favourite! Perfect for couples seeking refinement and comfort. Suite 1953 charms with classic and elegant décor, doors to a balcony with mountain views and a spacious bathroom with a hot tub.",
+      'Our most requested suite. Classic and elegant décor, a balcony with mountain views and a bathroom with a hot tub — for couples seeking refinement and comfort.',
     descricao:
       'A favorita dos nossos hóspedes! Perfeita para casais que buscam requinte e conforto. A suíte 1953 encanta com uma decoração clássica e elegante, portas para a varanda com vista para as montanhas e um banheiro amplo com hidromassagem.',
     descricao_en:
@@ -161,7 +162,7 @@ export const acomodacoes = [
     ],
   },
   {
-    slug: 'sweet-holly',
+    slug: 'suite-1954',
     nome: 'Suíte 1954',
     destaque: false,
     quartos: 1,
@@ -180,7 +181,7 @@ export const acomodacoes = [
     comodidades: ['Wi-Fi', 'TV', 'Água quente', 'Roupa de cama', 'Estacionamento grátis', 'Café da manhã'],
   },
   {
-    slug: 'suite-das-flores',
+    slug: 'suite-1952',
     nome: 'Suíte 1952',
     destaque: false,
     quartos: 1,
@@ -221,7 +222,7 @@ export const acomodacoes = [
     comodidades: ['Wi-Fi', 'TV', 'Água quente', 'Roupa de cama', 'Estacionamento grátis', 'Café da manhã'],
   },
   {
-    slug: 'suite-da-lua',
+    slug: 'suite-1955',
     nome: 'Suíte 1955',
     destaque: false,
     quartos: 1,
@@ -290,16 +291,22 @@ export const galeriaCategorias = [
 ]
 
 export const galeria = [
-  { file: 'pousada-01.webp', categoria: 'acomodacoes' },
-  { file: 'pousada-05.webp', categoria: 'acomodacoes' },
-  { file: 'pousada-07.webp', categoria: 'acomodacoes' },
-  { file: 'pousada-08.webp', categoria: 'acomodacoes' },
-  { file: 'pousada-02.webp', categoria: 'natureza' },
-  { file: 'pousada-03.webp', categoria: 'natureza' },
-  { file: 'pousada-04.webp', categoria: 'natureza' },
-  { file: 'pousada-06.webp', categoria: 'cafe' },
-  { file: 'pousada-10.webp', categoria: 'romantico' },
-  { file: 'pousada-09.webp', categoria: 'romantico' },
+  { file: 'pousada-11.webp', categoria: 'acomodacoes', alt: 'Suíte aconchegante da Pousada Casa Florinda', alt_en: 'Cozy suite at Pousada Casa Florinda' },
+  { file: 'pousada-01.webp', categoria: 'acomodacoes', alt: 'Chalé das Flores — fachada e varanda', alt_en: 'Chalé das Flores — exterior and balcony' },
+  { file: 'pousada-05.webp', categoria: 'acomodacoes', alt: 'Suíte 1953 com hidromassagem e varanda', alt_en: 'Suite 1953 with hot tub and balcony' },
+  { file: 'pousada-12.webp', categoria: 'acomodacoes', alt: 'Interior elegante de uma das suítes', alt_en: 'Elegant interior of one of the suites' },
+  { file: 'pousada-07.webp', categoria: 'acomodacoes', alt: 'Suíte 1952 — decoração delicada e acolhedora', alt_en: 'Suite 1952 — delicate and welcoming decor' },
+  { file: 'pousada-08.webp', categoria: 'acomodacoes', alt: 'Casinha — espaço íntimo e charmoso', alt_en: 'Casinha — intimate and charming space' },
+  { file: 'pousada-14.webp', categoria: 'acomodacoes', alt: 'Área de descanso da pousada', alt_en: 'Rest area of the inn' },
+  { file: 'pousada-15.webp', categoria: 'acomodacoes', alt: 'Varanda com vista para as montanhas de Teresópolis', alt_en: 'Balcony with views of the Teresópolis mountains' },
+  { file: 'pousada-02.webp', categoria: 'natureza', alt: 'Vista das montanhas a partir da Casa Florinda', alt_en: 'Mountain views from Casa Florinda' },
+  { file: 'pousada-03.webp', categoria: 'natureza', alt: 'Mata Atlântica no Parque Imbuí, Teresópolis', alt_en: 'Atlantic Forest in Parque Imbuí, Teresópolis' },
+  { file: 'pousada-04.webp', categoria: 'natureza', alt: 'Natureza e serenidade ao redor da pousada', alt_en: 'Nature and serenity surrounding the inn' },
+  { file: 'pousada-16.webp', categoria: 'natureza', alt: 'Jardim e paisagem verde da Casa Florinda', alt_en: 'Garden and green landscape at Casa Florinda' },
+  { file: 'pousada-13.webp', categoria: 'cafe', alt: 'Café da manhã caprichado da Casa Florinda', alt_en: 'Lovingly prepared breakfast at Casa Florinda' },
+  { file: 'pousada-06.webp', categoria: 'cafe', alt: 'Café da manhã servido com vista para a serra', alt_en: 'Breakfast served with mountain views' },
+  { file: 'pousada-10.webp', categoria: 'romantico', alt: 'Ambiente romântico da Suíte 1954', alt_en: 'Romantic atmosphere in Suite 1954' },
+  { file: 'pousada-09.webp', categoria: 'romantico', alt: 'Suíte 1955 com hidromassagem dupla — momento romântico', alt_en: 'Suite 1955 with double hot tub — romantic moment' },
 ]
 
 // ----------------- Depoimentos -----------------
@@ -309,36 +316,48 @@ export const depoimentos = [
     local: 'Estados Unidos',
     texto:
       'Super aconchegante! Limpo e a dona da pousada Cida deixa todos confortáveis, com um atendimento de quem sabe e trabalha no ramo da hospitalidade há anos! Super recomendo!',
+    texto_en:
+      'Super cozy! Clean, and the inn owner Cida makes everyone feel comfortable with service from someone who truly knows hospitality. Highly recommended!',
   },
   {
     nome: 'FernandaBL',
     local: 'Brasil',
     texto:
       'Ótimo lugar para descansar! Amei tudo, o local é super tranquilo e gostoso, perfeito para relaxar. Café da manhã delicioso e a Cida é super querida! Só não gostei de ter que ir embora.',
+    texto_en:
+      'Great place to relax! I loved everything — the setting is super peaceful and pleasant, perfect for unwinding. Delicious breakfast and Cida is so sweet! I only disliked having to leave.',
   },
   {
     nome: 'Carolina',
     local: 'Brasil',
     texto:
       'Cara de casa com conforto de pousada! A anfitriã é maravilhosa, super atenciosa. Recebemos um upgrade e fomos muito bem tratados. Bem localizado, não muito longe do centro e super tranquilo.',
+    texto_en:
+      'Feels like home with the comfort of an inn! The host is wonderful and super attentive. We received an upgrade and were treated extremely well. Well located, not too far from the centre and very peaceful.',
   },
   {
     nome: 'Ludwig Peter',
     local: 'Alemanha',
     texto:
       'Wow!! Cida é uma anfitriã excelente, faz tudo para que a sua estada seja um prazer. O chalé é muito confortável, o café da manhã muito gostoso. O lugar é um paraíso tranquilo na natureza de verdade. 10/10 — Tudo foi perfeito!',
+    texto_en:
+      'Wow!! Cida is an excellent host who does everything to make your stay a pleasure. The chalet is very comfortable, the breakfast is delicious. The place is a truly quiet paradise in nature. 10/10 — Everything was perfect!',
   },
   {
     nome: 'Maycon',
     local: 'Brasil',
     texto:
       'Aconchego!! Pousada estilo casa, conforme mostra o anúncio. A proprietária Cida é uma pessoa muito simpática e sempre disposta a ajudar. Recomendamos muito e indicamos!',
+    texto_en:
+      'So cozy!! A home-style inn, just as shown in the listing. The owner Cida is a very friendly person, always ready to help. We highly recommend it!',
   },
   {
     nome: 'Paulo',
     local: 'Brasil',
     texto:
       'O lugar é intimista e a vista é linda. O destaque fica para a anfitriã, incansável e sempre à disposição para nos proporcionar todo o conforto. A Cida foi muito prestativa.',
+    texto_en:
+      'The place is intimate and the view is beautiful. The highlight is the host — tireless and always available to provide every comfort. Cida was incredibly helpful.',
   },
 ]
 

@@ -6,7 +6,7 @@ import { useT } from '../i18n/LanguageProvider.jsx'
 import './Testimonials.css'
 
 export default function Testimonials() {
-  const { t } = useT()
+  const { t, pick } = useT()
   return (
     <section className="section section-olive tst">
       <div className="container">
@@ -39,7 +39,7 @@ export default function Testimonials() {
                     <FaStar key={i} />
                   ))}
                 </div>
-                <blockquote>{d.texto}</blockquote>
+                <blockquote>{pick(d, 'texto')}</blockquote>
                 <figcaption>
                   <strong>{d.nome}</strong>
                   <span>{d.local}</span>

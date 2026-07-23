@@ -32,11 +32,15 @@ export default function Termos() {
 
           <h2>3. Regras da casa</h2>
           <ul>
-            <li>Aceitamos bebês e animais de estimação;</li>
             <li>Não é permitido fumar nos quartos;</li>
             <li>Não são permitidos eventos ou festas;</li>
             <li>Serviços adicionais devem ser solicitados com antecedência.</li>
           </ul>
+          <p>
+            A aceitação de bebês e animais de estimação varia conforme a acomodação. Consulte as
+            regras específicas de cada acomodação na página de detalhes ou entre em contato conosco
+            antes de reservar.
+          </p>
 
           <h2>4. Cancelamentos</h2>
           <p>

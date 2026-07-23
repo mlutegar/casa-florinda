@@ -7,7 +7,7 @@ import './Footer.css'
 
 export default function Footer() {
   const { t } = useT()
-  const year = 2026
+  const year = new Date().getFullYear()
   return (
     <footer className="footer">
       <div className="footer__inner container">

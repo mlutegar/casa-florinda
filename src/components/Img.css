@@ -1,12 +1,26 @@
+@keyframes img-shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
 .img-fade {
   opacity: 0;
   transform: scale(1.02);
   transition: opacity 0.7s ease, transform 0.9s ease;
-  background: var(--offwhite-2);
+  background: linear-gradient(
+    90deg,
+    var(--offwhite-2) 25%,
+    var(--offwhite-1, #ede8df) 50%,
+    var(--offwhite-2) 75%
+  );
+  background-size: 1200px 100%;
+  animation: img-shimmer 1.6s infinite linear;
 }
 .img-fade.is-loaded {
   opacity: 1;
   transform: none;
+  background: none;
+  animation: none;
 }
 picture {
   display: contents;

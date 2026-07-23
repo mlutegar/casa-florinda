@@ -5,25 +5,32 @@ import { img, baseName } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'
 import './Gallery.css'
 
+// Aceita galeria como array de strings ('foto.webp') ou objetos ({ file, alt })
+function resolve(item, i) {
+  if (typeof item === 'string') return { file: item, alt: `Casa Florinda — foto ${i + 1}` }
+  return { file: item.file, alt: item.alt ?? `Casa Florinda — foto ${i + 1}` }
+}
+
 export default function Gallery({ images }) {
   const { t } = useT()
   const [index, setIndex] = useState(-1)
   const open = index >= 0
+  const items = images.map(resolve)
 
   const close = useCallback(() => setIndex(-1), [])
   const prev = useCallback(
     (e) => {
       e?.stopPropagation()
-      setIndex((i) => (i - 1 + images.length) % images.length)
+      setIndex((i) => (i - 1 + items.length) % items.length)
     },
-    [images.length],
+    [items.length],
   )
   const next = useCallback(
     (e) => {
       e?.stopPropagation()
-      setIndex((i) => (i + 1) % images.length)
+      setIndex((i) => (i + 1) % items.length)
     },
-    [images.length],
+    [items.length],
   )
 
   useEffect(() => {
@@ -44,9 +51,9 @@ export default function Gallery({ images }) {
   return (
     <>
       <div className="gallery">
-        {images.map((src, i) => (
-          <button className="gallery__item" key={src + i} onClick={() => setIndex(i)}>
-            <Img name={baseName(src)} alt={`Galeria Casa Florinda ${i + 1}`} sizes="(max-width: 760px) 50vw, 300px" />
+        {items.map(({ file, alt }, i) => (
+          <button className="gallery__item" key={file + i} onClick={() => setIndex(i)}>
+            <Img name={baseName(file)} alt={alt} sizes="(max-width: 760px) 50vw, 300px" />
           </button>
         ))}
       </div>
@@ -61,8 +68,8 @@ export default function Gallery({ images }) {
           </button>
           <img
             className="lightbox__img"
-            src={img(images[index])}
-            alt={`Casa Florinda — foto ${index + 1}`}
+            src={img(items[index].file)}
+            alt={items[index].alt}
             onClick={(e) => e.stopPropagation()}
           />
           <button className="lightbox__nav lightbox__next" onClick={next} aria-label={t('gallery.proxima')}>
