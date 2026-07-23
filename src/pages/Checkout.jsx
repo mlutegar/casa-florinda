@@ -3,6 +3,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { initMercadoPago, Payment } from '@mercadopago/sdk-react'
 import { FiArrowLeft, FiCalendar, FiUsers } from 'react-icons/fi'
 import Seo from '../components/Seo.jsx'
+import { useCurrency } from '../i18n/CurrencyProvider.jsx'
 import './Checkout.css'
 
 // Inicializa o SDK com a chave pública (exposta no browser — seguro)
@@ -14,6 +15,7 @@ export default function Checkout() {
   const state = location.state
 
   const [sdkReady, setSdkReady] = useState(false)
+  const { formatPrice, currency } = useCurrency()
 
   useEffect(() => {
     if (!state?.preferenceId) {
@@ -118,9 +120,12 @@ export default function Checkout() {
                   {noites} noite{noites > 1 ? 's' : ''}
                 </span>
                 <span className="checkout-page__total">
-                  R$ {total?.toLocaleString('pt-BR')}
+                  {formatPrice(total)}
                 </span>
               </div>
+              {currency === 'USD' && (
+                <p className="checkout-page__taxa">* Câmbio aproximado. Cobrança em BRL.</p>
+              )}
 
               {nome && (
                 <p className="checkout-page__guest">Reserva para: <strong>{nome}</strong></p>

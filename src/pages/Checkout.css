@@ -91,6 +91,13 @@
   color: var(--olive);
 }
 
+.checkout-page__taxa {
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  font-style: italic;
+  margin-top: 6px;
+}
+
 .checkout-page__guest {
   margin-top: 14px;
   font-size: 0.85rem;

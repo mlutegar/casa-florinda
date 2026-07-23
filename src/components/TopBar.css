@@ -8,13 +8,30 @@
   background: var(--olive);
   display: flex;
   align-items: center;
+  transition: transform var(--transition);
+  animation: topbar-in 0.5s ease both;
+}
+
+@keyframes topbar-in {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+/* Oculta ao rolar para baixo */
+.topbar--hidden {
+  transform: translateY(-100%);
+}
+
+/* Oculta quando menu mobile está aberto (o overlay já cobre a tela) */
+body.menu-open .topbar {
+  transform: translateY(-100%);
 }
 
 .topbar__inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 12px;
 }
 
 .topbar__item {
@@ -45,11 +62,20 @@
   color: var(--champanhe);
 }
 
+.topbar__separator {
+  color: var(--champanhe-light);
+  opacity: 0.4;
+  font-size: 0.9rem;
+  line-height: 1;
+  user-select: none;
+}
+
 @media (max-width: 480px) {
-  .topbar__inner {
-    gap: 18px;
-  }
   .topbar__item {
     font-size: 0.68rem;
+    gap: 4px;
+  }
+  .topbar__inner {
+    gap: 8px;
   }
 }

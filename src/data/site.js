@@ -16,6 +16,12 @@ export const waLink = (mensagem) =>
   `https://wa.me/${WHATS_NUM}?text=${encodeURIComponent(mensagem)}`
 
 // Link de reserva com o nome da acomodacao ja no texto
+// Dados de contato rápido (TopBar / Footer)
+export const telefone = {
+  display: '(21) 97801-3131',
+  link: 'tel:+5521978013131',
+}
+
 export const waReserva = (nomeAcomodacao) =>
   waLink(
     nomeAcomodacao

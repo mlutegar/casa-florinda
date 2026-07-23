@@ -37,6 +37,13 @@
   color: var(--champanhe-dark);
 }
 
+.booking-form__preco-taxa {
+  width: 100%;
+  font-size: 0.72rem;
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
 /* Campos */
 .booking-form__fields {
   display: flex;

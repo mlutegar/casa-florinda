@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
 import Hero from '../components/Hero.jsx'
+import BookingWidget from '../components/BookingWidget.jsx'
 import AccommodationCard from '../components/AccommodationCard.jsx'
 import Testimonials from '../components/Testimonials.jsx'
 import GalleryFilterable from '../components/GalleryFilterable.jsx'
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <Seo jsonLd="business" />
       <Hero />
+      <BookingWidget />
 
       {/* Boas-vindas */}
       <section id="bem-vindo" className="section welcome">

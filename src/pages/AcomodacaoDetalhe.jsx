@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link, Navigate, useLocation } from 'react-router-dom'
 import { FiUsers, FiHome, FiArrowLeft, FiCheck, FiClock } from 'react-icons/fi'
 import { LuBath } from 'react-icons/lu'
 import PageHeader from '../components/PageHeader.jsx'
@@ -13,6 +13,8 @@ import './Detalhe.css'
 export default function AcomodacaoDetalhe() {
   const { t, pick, tp } = useT()
   const { slug } = useParams()
+  const location = useLocation()
+  const bookingInitial = location.state ?? {}
   const a = acomodacoes.find((x) => x.slug === slug)
   useReveal([slug])
 
@@ -70,7 +72,7 @@ export default function AcomodacaoDetalhe() {
               </ul>
             </div>
 
-            <BookingForm acomodacao={a} />
+            <BookingForm acomodacao={a} initialValues={bookingInitial} />
           </div>
 
           <div className="detalhe__gallery reveal">

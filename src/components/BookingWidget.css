@@ -1,0 +1,141 @@
+.bw-wrap {
+  position: relative;
+  z-index: 10;
+  margin-top: -52px;
+  margin-bottom: 0;
+  width: min(1100px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.bw {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  background: rgba(245, 241, 232, 0.97);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid var(--champanhe);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 28px;
+}
+
+.bw__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.bw__field--sm {
+  flex: 0 0 90px;
+}
+
+.bw__field--lg {
+  flex: 1.4;
+}
+
+.bw__field label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--olive-soft);
+  white-space: nowrap;
+}
+
+.bw__icon {
+  font-size: 0.75rem;
+  color: var(--champanhe-dark);
+}
+
+.bw__field input,
+.bw__field select {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: var(--branco);
+  border: 1px solid var(--offwhite-2);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  width: 100%;
+  transition: border-color var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.bw__field input:focus,
+.bw__field select:focus {
+  outline: none;
+  border-color: var(--champanhe);
+}
+
+.bw__btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 22px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.bw__erro {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #c0392b;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 860px) {
+  .bw-wrap {
+    width: calc(100% - 32px);
+    margin-top: -32px;
+  }
+
+  .bw {
+    flex-wrap: wrap;
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .bw__field {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .bw__field--sm {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .bw__field--lg {
+    flex: 1 1 100%;
+  }
+
+  .bw__btn {
+    width: 100%;
+    justify-content: center;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bw-wrap {
+    width: calc(100% - 24px);
+    margin-top: -20px;
+  }
+
+  .bw__field {
+    flex: 1 1 100%;
+  }
+
+  .bw__field--sm {
+    flex: 1 1 100%;
+  }
+}

@@ -4,10 +4,12 @@ import { LuBath } from 'react-icons/lu'
 import Img from './Img.jsx'
 import { baseName } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'
+import { useCurrency } from '../i18n/CurrencyProvider.jsx'
 import './AccommodationCard.css'
 
 export default function AccommodationCard({ a }) {
-  const { t, pick } = useT()
+  const { t } = useT()
+  const { formatPrice } = useCurrency()
   return (
     <article className="acard reveal">
       <Link to={`/acomodacoes/${a.slug}`} className="acard__media">
@@ -21,9 +23,16 @@ export default function AccommodationCard({ a }) {
           <li><LuBath /> {a.banheiros} {t(a.banheiros > 1 ? 'common.banheiros' : 'common.banheiro')}</li>
           <li><FiUsers /> {a.hospedes} {t(a.hospedes > 1 ? 'common.hospedes' : 'common.hospede')}</li>
         </ul>
-        <p className="acard__resumo">{pick(a, 'resumo')}</p>
         <div className="acard__footer">
-          <span className="acard__preco">{t('common.precoConsulta')}</span>
+          {a.preco ? (
+            <div className="acard__preco-wrap">
+              <span className="acard__preco-label">{t('common.apartirDe')}</span>
+              <span className="acard__preco-valor">{formatPrice(a.preco)}</span>
+              <span className="acard__preco-nota">/ {t('common.noite')}</span>
+            </div>
+          ) : (
+            <span className="acard__preco">{t('common.precoConsulta')}</span>
+          )}
           <Link to={`/acomodacoes/${a.slug}`} className="btn btn-outline">{t('common.saibaMais')}</Link>
         </div>
       </div>

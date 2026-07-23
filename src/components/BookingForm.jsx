@@ -4,6 +4,7 @@ import { FiCalendar, FiUsers, FiUser, FiMail, FiPhone, FiCreditCard, FiLoader } 
 import { FaWhatsapp } from 'react-icons/fa'
 import { useAvailability } from '../hooks/useAvailability.js'
 import { waReserva } from '../data/site.js'
+import { useCurrency } from '../i18n/CurrencyProvider.jsx'
 import './BookingForm.css'
 
 // Hoje no formato YYYY-MM-DD (mínimo para check-in)
@@ -48,15 +49,15 @@ function formatTelefone(value) {
     .replace(/(\d{5})(\d{1,4})$/, '$1-$2')
 }
 
-export default function BookingForm({ acomodacao }) {
+export default function BookingForm({ acomodacao, initialValues }) {
   const navigate = useNavigate()
   const today = toInputDate(new Date())
   const tomorrow = toInputDate(new Date(Date.now() + 86400000))
 
   const [form, setForm] = useState({
-    checkin: today,
-    checkout: tomorrow,
-    hospedes: 1,
+    checkin: initialValues?.checkin || today,
+    checkout: initialValues?.checkout || tomorrow,
+    hospedes: initialValues?.hospedes || 1,
     nome: '',
     email: '',
     cpf: '',
@@ -66,6 +67,7 @@ export default function BookingForm({ acomodacao }) {
   const [loading, setLoading] = useState(false)
 
   const { isRangeAvailable, loading: loadingAvail } = useAvailability(acomodacao.slug)
+  const { formatPrice, currency } = useCurrency()
 
   const noites = useMemo(() => calcNoites(form.checkin, form.checkout), [form.checkin, form.checkout])
   const total = useMemo(
@@ -139,13 +141,16 @@ export default function BookingForm({ acomodacao }) {
     <div className="booking-form">
       <div className="booking-form__preco">
         <span className="booking-form__preco-valor">
-          R$ {acomodacao.preco.toLocaleString('pt-BR')}
+          {formatPrice(acomodacao.preco)}
         </span>
         <span className="booking-form__preco-label">/noite (semana)</span>
         {acomodacao.precoFimSemana && (
           <span className="booking-form__preco-fds">
-            R$ {acomodacao.precoFimSemana.toLocaleString('pt-BR')}/noite (fim de semana)
+            {formatPrice(acomodacao.precoFimSemana)}/noite (fim de semana)
           </span>
+        )}
+        {currency === 'USD' && (
+          <span className="booking-form__preco-taxa">* Câmbio aproximado. Cobrança em BRL.</span>
         )}
       </div>
 
@@ -200,7 +205,7 @@ export default function BookingForm({ acomodacao }) {
           <div className="booking-form__resumo">
             <span>{noites} noite{noites > 1 ? 's' : ''}</span>
             <span className="booking-form__total">
-              R$ {total.toLocaleString('pt-BR')}
+              {formatPrice(total)}
             </span>
           </div>
         )}

@@ -4,7 +4,18 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import Brand from './Brand.jsx'
 import { waReserva } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'
+import { useCurrency } from '../i18n/CurrencyProvider.jsx'
 import './Navbar.css'
+
+function CurrToggle({ currency, setCurrency, scrolled }) {
+  return (
+    <div className={`nav__lang ${scrolled ? 'is-dark' : ''}`}>
+      <button className={currency === 'BRL' ? 'active' : ''} onClick={() => setCurrency('BRL')}>BRL</button>
+      <span>|</span>
+      <button className={currency === 'USD' ? 'active' : ''} onClick={() => setCurrency('USD')}>USD</button>
+    </div>
+  )
+}
 
 function LangToggle({ lang, setLang, scrolled }) {
   return (
@@ -18,6 +29,7 @@ function LangToggle({ lang, setLang, scrolled }) {
 
 export default function Navbar() {
   const { t, lang, setLang } = useT()
+  const { currency, setCurrency } = useCurrency()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -39,6 +51,7 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+    document.body.classList.toggle('menu-open', open)
   }, [open])
 
   return (
@@ -63,6 +76,7 @@ export default function Navbar() {
               </li>
             ))}
             <li className="nav__lang-mobile"><LangToggle lang={lang} setLang={setLang} scrolled /></li>
+            <li className="nav__curr-mobile"><CurrToggle currency={currency} setCurrency={setCurrency} scrolled /></li>
             <li className="nav__cta-mobile">
               <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary">
                 {t('nav.reservar')}
@@ -72,6 +86,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__right">
+          <CurrToggle currency={currency} setCurrency={setCurrency} scrolled={scrolled} />
           <LangToggle lang={lang} setLang={setLang} scrolled={scrolled} />
           <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary nav__cta">
             {t('nav.reservar')}

@@ -13,7 +13,7 @@ export default function Acomodacoes() {
     <>
       <Seo
         title={t('acom.title')}
-        description="Chalés e suítes da Pousada Casa Florinda em Teresópolis/RJ: Chalé das Flores, Casinha da Bel, Sweet Holly, Suíte das Flores e Suíte da Lua."
+        description="Chalés e suítes da Pousada Casa Florinda em Teresópolis/RJ: Chalé das Flores, Casinha da Bel, Suíte 1954, Suíte 1952 e Suíte 1955."
         image="pousada-01.webp"
         path="/acomodacoes"
       />

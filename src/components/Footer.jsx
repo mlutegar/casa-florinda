@@ -13,7 +13,18 @@ export default function Footer() {
       <div className="footer__inner container">
         <div className="footer__col footer__brand">
           <Brand variant="light" size="md" />
-          <p>{t('footer.slogan')}</p>
+          <p className="footer__slogan">{t('footer.slogan')}</p>
+          <div className="footer__social">
+            <a
+              href={site.contato.instagramLink}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="footer__social-link"
+            >
+              <FiInstagram />
+            </a>
+          </div>
         </div>
 
         <div className="footer__col">
@@ -61,8 +72,17 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        <div className="container">
-          © {year} {site.nome} — {t('footer.direitos')}
+        <div className="container footer__bottom-inner">
+          <span>© {year} {site.nome} — {t('footer.direitos')}</span>
+          <a
+            href={site.contato.instagramLink}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="footer__bottom-ig"
+          >
+            <FiInstagram />
+          </a>
         </div>
       </div>
     </footer>

@@ -71,20 +71,13 @@
   color: var(--champanhe-dark);
 }
 
-.acard__resumo {
-  color: var(--texto-suave);
-  font-family: var(--font-serif);
-  font-size: 1.08rem;
-  margin-bottom: 22px;
-  flex: 1;
-}
-
 .acard__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .acard__preco {
@@ -92,4 +85,26 @@
   letter-spacing: 0.05em;
   color: var(--olive-soft);
   font-weight: 500;
+}
+
+.acard__preco-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.acard__preco-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-suave);
+}
+.acard__preco-valor {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--olive);
+}
+.acard__preco-nota {
+  font-size: 0.68rem;
+  color: var(--texto-suave);
 }
