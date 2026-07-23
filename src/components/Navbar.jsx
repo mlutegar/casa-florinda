@@ -7,22 +7,22 @@ import { useT } from '../i18n/LanguageProvider.jsx'
 import { useCurrency } from '../i18n/CurrencyProvider.jsx'
 import './Navbar.css'
 
-function CurrToggle({ currency, setCurrency, scrolled }) {
+function LocaleToggle({ lang, setLang, setCurrency, scrolled }) {
   return (
     <div className={`nav__lang ${scrolled ? 'is-dark' : ''}`}>
-      <button className={currency === 'BRL' ? 'active' : ''} onClick={() => setCurrency('BRL')}>BRL</button>
-      <span>|</span>
-      <button className={currency === 'USD' ? 'active' : ''} onClick={() => setCurrency('USD')}>USD</button>
-    </div>
-  )
-}
-
-function LangToggle({ lang, setLang, scrolled }) {
-  return (
-    <div className={`nav__lang ${scrolled ? 'is-dark' : ''}`}>
-      <button className={lang === 'pt' ? 'active' : ''} onClick={() => setLang('pt')}>PT</button>
-      <span>|</span>
-      <button className={lang === 'en' ? 'active' : ''} onClick={() => setLang('en')}>EN</button>
+      <button
+        className={lang === 'pt' ? 'active' : ''}
+        aria-label="Mudar idioma para Português"
+        aria-pressed={lang === 'pt'}
+        onClick={() => { setLang('pt'); setCurrency('BRL') }}
+      >PT</button>
+      <span aria-hidden="true">|</span>
+      <button
+        className={lang === 'en' ? 'active' : ''}
+        aria-label="Switch language to English"
+        aria-pressed={lang === 'en'}
+        onClick={() => { setLang('en'); setCurrency('USD') }}
+      >EN</button>
     </div>
   )
 }
@@ -61,7 +61,7 @@ export default function Navbar() {
           <Brand variant={scrolled ? 'dark' : 'light'} size="sm" />
         </Link>
 
-        <nav className={`nav__menu ${open ? 'is-open' : ''}`}>
+        <nav id="nav-menu" className={`nav__menu ${open ? 'is-open' : ''}`} aria-label="Menu principal">
           <ul>
             {links.map((l) => (
               <li key={l.to}>
@@ -75,8 +75,7 @@ export default function Navbar() {
                 </NavLink>
               </li>
             ))}
-            <li className="nav__lang-mobile"><LangToggle lang={lang} setLang={setLang} scrolled /></li>
-            <li className="nav__curr-mobile"><CurrToggle currency={currency} setCurrency={setCurrency} scrolled /></li>
+            <li className="nav__lang-mobile"><LocaleToggle lang={lang} setLang={setLang} setCurrency={setCurrency} scrolled /></li>
             <li className="nav__cta-mobile">
               <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary">
                 {t('nav.reservar')}
@@ -86,14 +85,19 @@ export default function Navbar() {
         </nav>
 
         <div className="nav__right">
-          <CurrToggle currency={currency} setCurrency={setCurrency} scrolled={scrolled} />
-          <LangToggle lang={lang} setLang={setLang} scrolled={scrolled} />
+          <LocaleToggle lang={lang} setLang={setLang} setCurrency={setCurrency} scrolled={scrolled} />
           <a href={waReserva()} target="_blank" rel="noreferrer" className="btn btn-primary nav__cta">
             {t('nav.reservar')}
           </a>
         </div>
 
-        <button className="nav__toggle" aria-label="Menu" onClick={() => setOpen((v) => !v)}>
+        <button
+          className="nav__toggle"
+          aria-label={open ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={open}
+          aria-controls="nav-menu"
+          onClick={() => setOpen((v) => !v)}
+        >
           {open ? <FiX /> : <FiMenu />}
         </button>
       </div>

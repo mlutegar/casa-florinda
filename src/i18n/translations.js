@@ -58,6 +58,8 @@ export const translations = {
     'common.falarWhats': 'Falar no WhatsApp',
 
     'hero.tagline': 'Bem-vindo à Casa Florinda',
+    'hero.title.pre': 'Bem-vindo à',
+    'hero.title.name': 'Casa Florinda',
     'hero.slogan': 'Sua Casa na Serra',
 
     'home.welcome.eyebrow': 'Seu lugar de refúgio',
@@ -137,6 +139,16 @@ export const translations = {
     'contato.hint': 'Ao enviar, o WhatsApp abrirá com sua mensagem pronta.',
     'contato.placeholderNome': 'Seu nome',
     'contato.placeholderMsg': 'Conte o que precisa...',
+    'contato.erroNome': 'Por favor, informe seu nome.',
+    'contato.enviando': 'Abrindo WhatsApp…',
+
+    'gallery.fechar': 'Fechar galeria',
+    'gallery.anterior': 'Foto anterior',
+    'gallery.proxima': 'Próxima foto',
+
+    'notfound.title': 'Página não encontrada',
+    'notfound.sub': 'A página que você procura não existe ou foi movida.',
+    'notfound.voltar': 'Voltar ao início',
 
     'footer.slogan': 'Onde o descanso encontra a natureza',
     'footer.localizacao': 'Localização',
@@ -182,8 +194,10 @@ export const translations = {
     'common.reservarVia': 'Book via WhatsApp',
     'common.falarWhats': 'Chat on WhatsApp',
 
-    'hero.tagline': 'Your place of refuge',
-    'hero.slogan': 'Where rest meets nature',
+    'hero.tagline': 'Welcome to Casa Florinda',
+    'hero.title.pre': 'Welcome to',
+    'hero.title.name': 'Casa Florinda',
+    'hero.slogan': 'Your Home in the Mountains',
 
     'home.welcome.eyebrow': 'Your place of refuge',
     'home.welcome.title': 'Welcome to Casa Florinda',
@@ -262,6 +276,16 @@ export const translations = {
     'contato.hint': 'On submit, WhatsApp will open with your message ready.',
     'contato.placeholderNome': 'Your name',
     'contato.placeholderMsg': 'Tell us what you need...',
+    'contato.erroNome': 'Please enter your name.',
+    'contato.enviando': 'Opening WhatsApp…',
+
+    'gallery.fechar': 'Close gallery',
+    'gallery.anterior': 'Previous photo',
+    'gallery.proxima': 'Next photo',
+
+    'notfound.title': 'Page not found',
+    'notfound.sub': 'The page you are looking for does not exist or has been moved.',
+    'notfound.voltar': 'Back to home',
 
     'footer.slogan': 'Where rest meets nature',
     'footer.localizacao': 'Location',

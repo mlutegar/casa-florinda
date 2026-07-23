@@ -18,8 +18,8 @@ export const waLink = (mensagem) =>
 // Link de reserva com o nome da acomodacao ja no texto
 // Dados de contato rápido (TopBar / Footer)
 export const telefone = {
-  display: '(21) 97801-3131',
-  link: 'tel:+5521978013131',
+  display: '(21) 97580-1313',
+  link: 'tel:+5521975801313',
 }
 
 export const waReserva = (nomeAcomodacao) =>
@@ -76,6 +76,19 @@ export const site = {
 
 // Avaliações (Airbnb/Booking/Google). Deixe vazio até ter links/notas reais;
 // enquanto vazio, o selo não é exibido e nenhuma nota entra no SEO.
+// Slides do hero (carousel da capa) — primeira imagem é a pré-carregada no index.html
+export const heroSlides = [
+  'pousada-02.webp',
+  'pousada-17.webp',
+  'pousada-03.webp',
+  'pousada-18.webp',
+  'pousada-01.webp',
+  'pousada-19.webp',
+  'pousada-05.webp',
+  'pousada-20.webp',
+  'pousada-04.webp',
+]
+
 export const avaliacoes = []
 
 // ----------------- Acomodações -----------------
@@ -139,7 +152,7 @@ export const acomodacoes = [
     descricao_en:
       "Our guests' favourite! Perfect for couples seeking refinement and comfort. Suite 1953 charms with classic and elegant décor, doors to a balcony with mountain views and a spacious bathroom with a hot tub.",
     capa: 'pousada-05.webp',
-    galeria: ['pousada-05.webp', 'pousada-08.webp'],
+    galeria: ['pousada-05.webp', 'pousada-08.webp', 'pousada-17.webp', 'pousada-18.webp', 'pousada-19.webp', 'pousada-20.webp'],
     comodidades: ['Wi-Fi', 'Hidromassagem', 'Frigobar', 'Varanda com vista', 'TV HD', 'Água quente', 'Estacionamento grátis', 'Café da manhã'],
     regras: [
       'Não é permitido fumar nos quartos',

@@ -14,6 +14,7 @@ export default function Footer() {
         <div className="footer__col footer__brand">
           <Brand variant="light" size="md" />
           <p className="footer__slogan">{t('footer.slogan')}</p>
+          <span className="footer__divider">✦</span>
           <div className="footer__social">
             <a
               href={site.contato.instagramLink}

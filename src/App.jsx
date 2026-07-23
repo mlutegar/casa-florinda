@@ -2,8 +2,9 @@ import { Routes, Route } from 'react-router-dom'
 import TopBar from './components/TopBar.jsx'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
-import WhatsAppFloat from './components/WhatsAppFloat.jsx'
+import SocialFloat from './components/SocialFloat.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import ErrorBoundary from './components/ErrorBoundary.jsx'
 import Home from './pages/Home.jsx'
 import Acomodacoes from './pages/Acomodacoes.jsx'
 import AcomodacaoDetalhe from './pages/AcomodacaoDetalhe.jsx'
@@ -17,6 +18,7 @@ import Checkout from './pages/Checkout.jsx'
 import BookingConfirmacao from './pages/BookingConfirmacao.jsx'
 import BookingPendente from './pages/BookingPendente.jsx'
 import BookingErro from './pages/BookingErro.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   return (
@@ -25,24 +27,27 @@ export default function App() {
       <TopBar />
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/acomodacoes" element={<Acomodacoes />} />
-          <Route path="/acomodacoes/:slug" element={<AcomodacaoDetalhe />} />
-          <Route path="/sobre-nos" element={<SobreNos />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/contato" element={<Contato />} />
-          <Route path="/faq" element={<Faq />} />
-          <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
-          <Route path="/termos" element={<Termos />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/reserva/confirmada" element={<BookingConfirmacao />} />
-          <Route path="/reserva/pendente" element={<BookingPendente />} />
-          <Route path="/reserva/erro" element={<BookingErro />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/acomodacoes" element={<Acomodacoes />} />
+            <Route path="/acomodacoes/:slug" element={<AcomodacaoDetalhe />} />
+            <Route path="/sobre-nos" element={<SobreNos />} />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
+            <Route path="/termos" element={<Termos />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/reserva/confirmada" element={<BookingConfirmacao />} />
+            <Route path="/reserva/pendente" element={<BookingPendente />} />
+            <Route path="/reserva/erro" element={<BookingErro />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ErrorBoundary>
       </main>
       <Footer />
-      <WhatsAppFloat />
+      <SocialFloat />
     </>
   )
 }

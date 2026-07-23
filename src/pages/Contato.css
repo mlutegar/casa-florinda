@@ -5,6 +5,10 @@
   align-items: start;
 }
 
+.contato > * {
+  min-width: 0;
+}
+
 .contato__list {
   display: flex;
   flex-direction: column;
@@ -41,6 +45,8 @@
   padding: 34px 32px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  min-width: 0;
 }
 .contato__form label {
   display: block;
@@ -55,7 +61,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  min-width: 0;
 }
+
+.contato__row > * {
+  min-width: 0;
+  overflow: hidden;
+}
+.contato__form input[type='date'] {
+  min-width: 0;
+  width: 100%;
+}
+
 .contato__form input,
 .contato__form select,
 .contato__form textarea {
@@ -85,6 +102,22 @@
   width: 100%;
   justify-content: center;
   margin-top: 6px;
+}
+.contato__form input[aria-invalid='true'] {
+  border-color: #c0392b;
+}
+.contato__erro {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #c0392b;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+}
+.contato__form .btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .contato__hint {
   text-align: center;

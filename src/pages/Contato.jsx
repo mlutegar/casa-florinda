@@ -17,20 +17,32 @@ export default function Contato() {
     hospedes: '2',
     mensagem: '',
   })
+  const [erroNome, setErroNome] = useState(false)
+  const [enviando, setEnviando] = useState(false)
 
-  const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
+  const update = (e) => {
+    if (e.target.name === 'nome') setErroNome(false)
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
+  }
 
   const enviar = (e) => {
     e.preventDefault()
+    if (!form.nome.trim()) {
+      setErroNome(true)
+      document.getElementById('contato-nome')?.focus()
+      return
+    }
+    setEnviando(true)
     const linhas = [
       'Olá! Vim pelo site da Pousada Casa Florinda.',
-      form.nome && `Nome: ${form.nome}`,
+      `Nome: ${form.nome}`,
       form.checkin && `Check-in: ${form.checkin}`,
       form.checkout && `Check-out: ${form.checkout}`,
       form.hospedes && `Hóspedes: ${form.hospedes}`,
       form.mensagem && `Mensagem: ${form.mensagem}`,
     ].filter(Boolean)
     window.open(waLink(linhas.join('\n')), '_blank', 'noreferrer')
+    setTimeout(() => setEnviando(false), 2000)
   }
 
   return (
@@ -105,34 +117,48 @@ export default function Contato() {
             <h2 className="section-title" style={{ textAlign: 'left' }}>{t('contato.enviarMsg')}</h2>
             <hr className="divider" style={{ margin: '16px 0 26px' }} />
 
-            <label>
-              {t('contato.nome')}
-              <input name="nome" value={form.nome} onChange={update} placeholder={t('contato.placeholderNome')} />
+            <label htmlFor="contato-nome">
+              {t('contato.nome')} <span aria-hidden="true">*</span>
+              <input
+                id="contato-nome"
+                name="nome"
+                value={form.nome}
+                onChange={update}
+                placeholder={t('contato.placeholderNome')}
+                aria-required="true"
+                aria-invalid={erroNome}
+                aria-describedby={erroNome ? 'contato-nome-erro' : undefined}
+              />
+              {erroNome && (
+                <span id="contato-nome-erro" role="alert" className="contato__erro">
+                  {t('contato.erroNome')}
+                </span>
+              )}
             </label>
             <div className="contato__row">
-              <label>
+              <label htmlFor="contato-checkin">
                 {t('acom.checkin')}
-                <input type="date" name="checkin" value={form.checkin} onChange={update} />
+                <input id="contato-checkin" type="date" name="checkin" value={form.checkin} onChange={update} />
               </label>
-              <label>
+              <label htmlFor="contato-checkout">
                 {t('acom.checkout')}
-                <input type="date" name="checkout" value={form.checkout} onChange={update} />
+                <input id="contato-checkout" type="date" name="checkout" value={form.checkout} onChange={update} />
               </label>
             </div>
-            <label>
+            <label htmlFor="contato-hospedes">
               {t('contato.hospedes')}
-              <select name="hospedes" value={form.hospedes} onChange={update}>
+              <select id="contato-hospedes" name="hospedes" value={form.hospedes} onChange={update}>
                 {[1, 2, 3, 4, 5, 6].map((n) => (
                   <option key={n} value={n}>{n} {t(n > 1 ? 'common.hospedes' : 'common.hospede')}</option>
                 ))}
               </select>
             </label>
-            <label>
+            <label htmlFor="contato-mensagem">
               {t('contato.mensagem')}
-              <textarea name="mensagem" value={form.mensagem} onChange={update} rows="4" placeholder={t('contato.placeholderMsg')} />
+              <textarea id="contato-mensagem" name="mensagem" value={form.mensagem} onChange={update} rows="4" placeholder={t('contato.placeholderMsg')} />
             </label>
-            <button type="submit" className="btn btn-primary">
-              <FaWhatsapp /> {t('contato.enviar')}
+            <button type="submit" className="btn btn-primary" disabled={enviando} aria-busy={enviando}>
+              <FaWhatsapp /> {enviando ? t('contato.enviando') : t('contato.enviar')}
             </button>
             <p className="contato__hint">{t('contato.hint')}</p>
           </form>

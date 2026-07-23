@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
 import { FaQuoteLeft, FaStar } from 'react-icons/fa'
 import { depoimentos } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'

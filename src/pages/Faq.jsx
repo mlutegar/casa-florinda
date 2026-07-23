@@ -32,11 +32,23 @@ export default function Faq() {
               const isOpen = open === i
               return (
                 <li key={i} className={`faq__item ${isOpen ? 'is-open' : ''}`}>
-                  <button className="faq__q" onClick={() => setOpen(isOpen ? -1 : i)}>
+                  <button
+                    className="faq__q"
+                    onClick={() => setOpen(isOpen ? -1 : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-resp-${i}`}
+                    id={`faq-q-${i}`}
+                  >
                     <span>{pick(item, 'pergunta')}</span>
-                    {isOpen ? <FiMinus /> : <FiPlus />}
+                    {isOpen ? <FiMinus aria-hidden="true" /> : <FiPlus aria-hidden="true" />}
                   </button>
-                  <div className="faq__a" style={{ maxHeight: isOpen ? '300px' : '0' }}>
+                  <div
+                    id={`faq-resp-${i}`}
+                    className="faq__a"
+                    role="region"
+                    aria-labelledby={`faq-q-${i}`}
+                    style={{ maxHeight: isOpen ? '300px' : '0' }}
+                  >
                     <p>{pick(item, 'resposta')}</p>
                   </div>
                 </li>

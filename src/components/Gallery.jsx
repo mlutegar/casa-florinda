@@ -2,9 +2,11 @@ import { useState, useCallback, useEffect } from 'react'
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import Img from './Img.jsx'
 import { img, baseName } from '../data/site.js'
+import { useT } from '../i18n/LanguageProvider.jsx'
 import './Gallery.css'
 
 export default function Gallery({ images }) {
+  const { t } = useT()
   const [index, setIndex] = useState(-1)
   const open = index >= 0
 
@@ -51,19 +53,19 @@ export default function Gallery({ images }) {
 
       {open && (
         <div className="lightbox" onClick={close} role="dialog" aria-modal="true">
-          <button className="lightbox__close" onClick={close} aria-label="Fechar">
+          <button className="lightbox__close" onClick={close} aria-label={t('gallery.fechar')}>
             <FiX />
           </button>
-          <button className="lightbox__nav lightbox__prev" onClick={prev} aria-label="Anterior">
+          <button className="lightbox__nav lightbox__prev" onClick={prev} aria-label={t('gallery.anterior')}>
             <FiChevronLeft />
           </button>
           <img
             className="lightbox__img"
             src={img(images[index])}
-            alt={`Foto ${index + 1}`}
+            alt={`Casa Florinda — foto ${index + 1}`}
             onClick={(e) => e.stopPropagation()}
           />
-          <button className="lightbox__nav lightbox__next" onClick={next} aria-label="Próxima">
+          <button className="lightbox__nav lightbox__next" onClick={next} aria-label={t('gallery.proxima')}>
             <FiChevronRight />
           </button>
         </div>

@@ -1,25 +1,15 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/effect-fade'
-import 'swiper/css/pagination'
 import { FiChevronDown } from 'react-icons/fi'
-import { img } from '../data/site.js'
+import { img, heroSlides } from '../data/site.js'
 import { useT } from '../i18n/LanguageProvider.jsx'
 import './Hero.css'
-
-const slides = [
-  'pousada-02.webp',
-  'pousada-03.webp',
-  'pousada-01.webp',
-  'pousada-05.webp',
-  'pousada-04.webp',
-]
 
 export default function Hero() {
   const { t } = useT()
   return (
     <section className="hero">
+      <div aria-live="polite" aria-atomic="false" className="sr-only" />
       <Swiper
         className="hero__swiper"
         modules={[Autoplay, EffectFade, Pagination]}
@@ -29,7 +19,7 @@ export default function Hero() {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
       >
-        {slides.map((s, i) => (
+        {heroSlides.map((s, i) => (
           <SwiperSlide key={s}>
             <div
               className="hero__slide"
@@ -44,7 +34,11 @@ export default function Hero() {
       <div className="hero__overlay" />
 
       <div className="hero__content">
-        <h1 className="hero__title">{t('hero.tagline')}</h1>
+        <h1 className="hero__title">
+          <span className="hero__title-pre">{t('hero.title.pre')}</span>
+          <span className="hero__title-name">{t('hero.title.name')}</span>
+        </h1>
+        <div className="hero__divider" aria-hidden="true" />
         <p className="hero__sub">{t('hero.slogan')}</p>
       </div>
 
